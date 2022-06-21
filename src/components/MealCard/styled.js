@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
-const MealCard = styled.article`
+const MealCardContainer = styled.article`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 3em;
-	width: 5em;
-	border: solid 0.2em black;
+	height: 8em;
+	width: 10em;
+	margin: 1em 0 1em 0;
+	border: solid 0.1em black;
 `;
+
+export default MealCardContainer;

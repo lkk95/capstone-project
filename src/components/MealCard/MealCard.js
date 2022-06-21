@@ -1,10 +1,10 @@
-import MealCard from './styled.js';
+import MealCardContainer from './styled.js';
 
-export default function MealCard() {
+export default function MealCard({title, category}) {
 	return (
-		<>
-			<h2>Title</h2>
-			<p>Category</p>
-		</>
+		<MealCardContainer>
+			<h2>{title}</h2>
+			<p>{category}</p>
+		</MealCardContainer>
 	);
 }
