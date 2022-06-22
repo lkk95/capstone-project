@@ -1,7 +1,7 @@
 import {nanoid} from 'nanoid';
 import {Helmet} from 'react-helmet';
 
-import Layout from '../components/Layout';
+import Layout from '../components/Layout/Layout.js';
 import MealCard from '../components/MealCard/MealCard.js';
 
 export default function HomePage() {

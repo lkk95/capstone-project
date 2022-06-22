@@ -6,7 +6,7 @@ const MealCardContainer = styled.article`
 	justify-content: center;
 	align-items: center;
 	height: 8em;
-	width: 10em;
+	width: 20em;
 	margin: 1em 0 1em 0;
 	border: solid 0.1em black;
 `;
