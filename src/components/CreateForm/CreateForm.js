@@ -18,6 +18,7 @@ export default function CreateForm({addMeal}) {
 			<FormContainer role="form" onSubmit={handleSubmit}>
 				<label htmlFor="title">Recipe Title:</label>
 				<input
+					role="textbox"
 					type="text"
 					name="title"
 					id="title"
