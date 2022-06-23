@@ -34,8 +34,6 @@ export default function CreateForm({addMeal}) {
 				</fieldset>
 				<input type="submit" value="Add" />
 			</FormContainer>
-			<p>{title}</p>
-			<p>{category}</p>
 		</>
 	);
 }
