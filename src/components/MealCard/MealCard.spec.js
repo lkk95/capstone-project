@@ -5,13 +5,10 @@ import MealCard from './MealCard.js';
 
 describe('MealCard component', () => {
 	it('should render meal title and category', () => {
-		const titletext = 'Enchiladas';
-		render(<h2>{titletext}</h2>);
-		const title = screen.getByText(titletext);
+		render(<MealCard title="Greek Salad" category="Lunch" />);
 
-		const categorytext = 'Dinner';
-		render(<p>{categorytext}</p>);
-		const category = screen.getByText(categorytext);
+		const title = screen.getByText('Greek Salad');
+		const category = screen.getByText('Lunch');
 
 		expect(title).toBeInTheDocument();
 		expect(category).toBeInTheDocument();
