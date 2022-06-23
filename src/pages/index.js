@@ -5,7 +5,6 @@ import Layout from '../components/Layout/Layout.js';
 import MealCard from '../components/MealCard/MealCard.js';
 
 export default function HomePage() {
-	//Example Array for static meals
 	const allMeals = [
 		{
 			id: nanoid(),
