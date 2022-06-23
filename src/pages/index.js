@@ -41,7 +41,7 @@ export default function HomePage() {
 	return (
 		<Layout>
 			<Helmet>
-				<title key="title">My Project</title>
+				<title key="title">MealsByMe</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
 			<h1>Your planned meals</h1>
