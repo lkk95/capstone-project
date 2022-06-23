@@ -2,32 +2,39 @@ import {useState} from 'react';
 
 import FormContainer from './styled.js';
 
-export default function CreateForm() {
-	const [name, setName] = useState('');
+export default function CreateForm({addMeal}) {
+	const [title, setTitle] = useState('');
 	const [category, setCategory] = useState('');
+
+	const handleSubmit = event => {
+		event.preventDefault();
+		addMeal(title, category);
+		setTitle('');
+		setCategory('');
+	};
 
 	return (
 		<>
-			<FormContainer>
-				<label htmlFor="title">Recipe Name:</label>
+			<FormContainer onSubmit={handleSubmit}>
+				<label htmlFor="title">Recipe Title:</label>
 				<input
 					type="text"
 					name="title"
 					id="title"
-					onChange={event => setName(event.target.value)}
+					onChange={event => setTitle(event.target.value)}
 				/>
 				<fieldset onChange={event => setCategory(event.target.value)}>
 					<legend>Choose the category of your recipe:</legend>
-					<input type="radio" name="category" id="breakfast" value="breakfast" />
+					<input type="radio" name="category" id="breakfast" value="Breakfast" />
 					<label htmlFor="breakfast">Breakfast</label>
-					<input type="radio" name="category" id="lunch" value="lunch" />
+					<input type="radio" name="category" id="lunch" value="Lunch" />
 					<label htmlFor="lunch">Lunch</label>
-					<input type="radio" name="category" id="dinner" value="dinner" />
+					<input type="radio" name="category" id="dinner" value="Dinner" />
 					<label htmlFor="dinner">Dinner</label>
 				</fieldset>
 				<input type="submit" value="Add" />
 			</FormContainer>
-			<p>{name}</p>
+			<p>{title}</p>
 			<p>{category}</p>
 		</>
 	);

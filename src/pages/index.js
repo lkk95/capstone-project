@@ -1,11 +1,13 @@
 import {nanoid} from 'nanoid';
+import * as React from 'react';
+import {useState} from 'react';
 import {Helmet} from 'react-helmet';
 
 import CreateForm from '../components/CreateForm/CreateForm.js';
 import Layout from '../components/Layout';
 
 export default function HomePage() {
-	const allMeals = [
+	const [allMeals, setAllMeals] = useState([
 		{
 			id: nanoid(),
 			title: 'Spaghetti Carbonara',
@@ -36,7 +38,19 @@ export default function HomePage() {
 			title: 'Chocolate Porridge',
 			category: 'Breakfast',
 		},
-	];
+	]);
+
+	function addMeal(title, category) {
+		const newMeals = [
+			...allMeals,
+			{
+				id: nanoid(),
+				title,
+				category,
+			},
+		];
+		setAllMeals(newMeals);
+	}
 
 	return (
 		<Layout>
@@ -56,7 +70,7 @@ export default function HomePage() {
 				})}
 			</section>
 			<hr />
-			<CreateForm />
+			<CreateForm addMeal={addMeal} />
 		</Layout>
 	);
 }
