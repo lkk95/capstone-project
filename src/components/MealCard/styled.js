@@ -10,11 +10,11 @@ const MealCardContainer = styled.article`
 	margin: 1em auto;
 	border: solid 0.1em #eaeded;
 	border-radius: 1em;
-	background-color: #eaeded;
+	background-color: #f2eae3;
 
 	h3 {
 		margin: 0em;
-		color: #f1c40f;
+		color: #d4ac0d;
 	}
 `;
 
