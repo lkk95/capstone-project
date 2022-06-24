@@ -3,8 +3,9 @@ import * as React from 'react';
 import {useState} from 'react';
 import {Helmet} from 'react-helmet';
 
-import CreateForm from '../components/CreateForm/CreateForm.js';
-import Layout from '../components/Layout';
+import CreateForm from '../components/CreateForm/index.js';
+import Layout from '../components/Layout/index.js';
+import MealCard from '../components/MealCard/index.js';
 
 export default function HomePage() {
 	const [allMeals, setAllMeals] = useState([
@@ -58,19 +59,13 @@ export default function HomePage() {
 				<title key="title">MealsByMe</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
-			<h1>Your planned meals</h1>
+			<CreateForm addMeal={addMeal} />
 			<section>
+				<h2>Your planned meals</h2>
 				{allMeals.map(meal => {
-					return (
-						<section key={meal.id}>
-							<p>{meal.title}</p>
-							<p>{meal.category}</p>
-						</section>
-					);
+					return <MealCard key={meal.id} title={meal.title} category={meal.category} />;
 				})}
 			</section>
-			<hr />
-			<CreateForm addMeal={addMeal} />
 		</Layout>
 	);
 }

@@ -1,5 +1,7 @@
 import {useState} from 'react';
 
+import Button from '../Button/index.js';
+
 import FormContainer from './styled.js';
 
 export default function CreateForm({addMeal}) {
@@ -10,21 +12,22 @@ export default function CreateForm({addMeal}) {
 		event.preventDefault();
 		addMeal(title, category);
 		setTitle('');
-		setCategory('');
 	};
 
 	return (
 		<>
-			<FormContainer role="form" onSubmit={handleSubmit}>
-				<label htmlFor="title">Recipe Title:</label>
-				<input
-					role="textbox"
-					type="text"
-					name="title"
-					id="title"
-					onChange={event => setTitle(event.target.value)}
-					required
-				/>
+			<FormContainer onSubmit={handleSubmit}>
+				<h2>Plan your next meal!</h2>
+				<fieldset>
+					<label htmlFor="title">Recipe Title:</label>
+					<input
+						type="text"
+						name="title"
+						id="title"
+						onChange={event => setTitle(event.target.value)}
+						required
+					/>
+				</fieldset>
 				<fieldset onChange={event => setCategory(event.target.value)}>
 					<legend>Choose the category of your recipe:</legend>
 					<input type="radio" name="category" id="breakfast" value="Breakfast" required />
@@ -34,7 +37,7 @@ export default function CreateForm({addMeal}) {
 					<input type="radio" name="category" id="dinner" value="Dinner" />
 					<label htmlFor="dinner">Dinner</label>
 				</fieldset>
-				<input type="submit" value="Add" />
+				<Button type="submit">Add</Button>
 			</FormContainer>
 		</>
 	);

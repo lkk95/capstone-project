@@ -1,22 +1,11 @@
 import styled from 'styled-components';
 
-import {pxToRem} from '../../utils/unit';
-
 const StyledButton = styled.button`
-	padding: 0.5em 1em;
-	border: 1px solid rgba(0, 0, 0, 0.3);
-	border-radius: ${pxToRem(4)};
-	background: #fae;
-	color: #000;
-	font-size: 1em;
-
-	&:hover {
-		background: #d8b;
-	}
-
-	&:active {
-		background: #bad;
-	}
+	width: 6em;
+	height: 2.5em;
+	border: solid 0 black;
+	border-radius: 2em;
+	background-color: #f4d03f;
 `;
 
 export default StyledButton;
