@@ -1,8 +1,8 @@
 import {Helmet} from 'react-helmet';
-import useStore from '../hooks/useStore.js';
 
 import Layout from '../components/Layout/Layout.js';
 import MealCard from '../components/MealCard/MealCard.js';
+import useStore from '../hooks/useStore.js';
 
 export default function HomePage() {
 	const allMeals = useStore(state => state.allMeals);

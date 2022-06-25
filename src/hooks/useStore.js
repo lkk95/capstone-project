@@ -1,5 +1,5 @@
-import create from 'zustand';
 import {nanoid} from 'nanoid';
+import create from 'zustand';
 
 const useStore = create(set => ({
 	allMeals: [
@@ -27,11 +27,6 @@ const useStore = create(set => ({
 			id: nanoid(),
 			title: 'Enchiladas',
 			category: 'Dinner',
-		},
-		{
-			id: nanoid(),
-			title: 'Chocolate Porridge',
-			category: 'Breakfast',
 		},
 	],
 }));
