@@ -1,42 +1,11 @@
-import {nanoid} from 'nanoid';
 import {Helmet} from 'react-helmet';
+import useStore from '../hooks/useStore.js';
 
 import Layout from '../components/Layout/Layout.js';
 import MealCard from '../components/MealCard/MealCard.js';
 
 export default function HomePage() {
-	const allMeals = [
-		{
-			id: nanoid(),
-			title: 'Spaghetti Carbonara',
-			category: 'Dinner',
-		},
-		{
-			id: nanoid(),
-			title: 'Blueberry Pancakes',
-			category: 'Breakfast',
-		},
-		{
-			id: nanoid(),
-			title: 'Greek Salad',
-			category: 'Lunch',
-		},
-		{
-			id: nanoid(),
-			title: 'Pea Soup',
-			category: 'Lunch',
-		},
-		{
-			id: nanoid(),
-			title: 'Enchiladas',
-			category: 'Dinner',
-		},
-		{
-			id: nanoid(),
-			title: 'Chocolate Porridge',
-			category: 'Breakfast',
-		},
-	];
+	const allMeals = useStore(state => state.allMeals);
 
 	return (
 		<Layout>
