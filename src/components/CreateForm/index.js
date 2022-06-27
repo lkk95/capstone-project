@@ -7,14 +7,12 @@ import StyledForm from './styled.js';
 
 export default function CreateForm() {
 	const [newMeal, setNewMeal] = useState({});
-	const [isChecked, setChecked] = useState(true);
 	const addMeal = useStore(state => state.addMeal);
 
 	const handleSubmit = event => {
 		event.preventDefault();
 		addMeal(newMeal);
 		setNewMeal({title: ''});
-		setChecked(true);
 	};
 
 	return (
@@ -35,7 +33,6 @@ export default function CreateForm() {
 				<fieldset
 					onChange={event => {
 						setNewMeal({...newMeal, category: event.target.value});
-						setChecked(false);
 					}}
 				>
 					<legend>Choose the category of your recipe:</legend>
@@ -45,7 +42,7 @@ export default function CreateForm() {
 						id="breakfast"
 						value="Breakfast"
 						required
-						checked={isChecked ? true : false}
+						checked
 					/>
 					<label htmlFor="breakfast">Breakfast</label>
 					<input type="radio" name="category" id="lunch" value="Lunch" />
