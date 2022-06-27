@@ -7,9 +7,9 @@ const FormContainer = styled.form`
 	justify-content: center;
 	gap: 2em;
 	padding: 2em;
-	background-color: #d4efdf;
 	border: #d4efdf solid 0;
 	border-radius: 0.4em;
+	background-color: #d4efdf;
 
 	h2 {
 		font-size: 1.2rem;
