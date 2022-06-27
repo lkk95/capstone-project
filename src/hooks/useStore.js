@@ -1,16 +1,34 @@
+import {nanoid} from 'nanoid';
 import create from 'zustand';
 
 const useStore = create(set => ({
-	counter: 0,
-	setCounter(counter) {
-		set({counter});
-	},
-	decrementCounter(step = 1) {
-		set(({counter}) => ({counter: counter - step}));
-	},
-	incrementCounter(step = 1) {
-		set(({counter}) => ({counter: counter + step}));
-	},
+	allMeals: [
+		{
+			id: nanoid(),
+			title: 'Spaghetti Carbonara',
+			category: 'Dinner',
+		},
+		{
+			id: nanoid(),
+			title: 'Blueberry Pancakes',
+			category: 'Breakfast',
+		},
+		{
+			id: nanoid(),
+			title: 'Greek Salad',
+			category: 'Lunch',
+		},
+		{
+			id: nanoid(),
+			title: 'Pea Soup',
+			category: 'Lunch',
+		},
+		{
+			id: nanoid(),
+			title: 'Enchiladas',
+			category: 'Dinner',
+		},
+	],
 }));
 
 export default useStore;
