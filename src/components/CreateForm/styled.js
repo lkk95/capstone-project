@@ -6,8 +6,8 @@ const FormContainer = styled.form`
 	align-items: center;
 	justify-content: center;
 	gap: 2em;
-	background-color: #d4efdf;
 	padding: 2em;
+	background-color: #d4efdf;
 	border: #d4efdf solid 0;
 	border-radius: 0.4em;
 
@@ -16,8 +16,8 @@ const FormContainer = styled.form`
 	}
 
 	fieldset {
-		border: 0;
 		display: flex;
+		border: 0;
 		justify-content: space-evenly;
 	}
 
