@@ -1,5 +1,6 @@
 import {Helmet} from 'react-helmet';
 
+import CreateForm from '../components/CreateForm/index.js';
 import Layout from '../components/Layout/Layout.js';
 import MealCard from '../components/MealCard/MealCard.js';
 import useStore from '../hooks/useStore.js';
@@ -13,6 +14,7 @@ export default function HomePage() {
 				<title key="title">MealsByMe</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
+			<CreateForm />
 			<h1>Your planned meals</h1>
 			<section>
 				{allMeals.map(meal => {
