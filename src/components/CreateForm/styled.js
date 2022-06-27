@@ -17,8 +17,8 @@ const FormContainer = styled.form`
 
 	fieldset {
 		display: flex;
-		border: 0;
 		justify-content: space-evenly;
+		border: 0;
 	}
 
 	label {
