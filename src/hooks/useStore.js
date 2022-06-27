@@ -29,6 +29,20 @@ const useStore = create(set => ({
 			category: 'Dinner',
 		},
 	],
+	addMeal: (title, category) => {
+		set(state => {
+			return {
+				allMeals: [
+					...state.allMeals,
+					{
+						id: nanoid(),
+						title,
+						category,
+					},
+				],
+			};
+		});
+	},
 }));
 
 export default useStore;
