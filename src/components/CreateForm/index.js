@@ -8,11 +8,14 @@ import FormContainer from './styled.js';
 export default function CreateForm() {
 	const [title, setTitle] = useState('');
 	const [category, setCategory] = useState('');
+	const [isChecked, setChecked] = useState(true);
 	const addMeal = useStore(state => state.addMeal);
 
 	const handleSubmit = event => {
 		event.preventDefault();
 		addMeal(title, category);
+		setTitle('');
+		setChecked(true);
 	};
 
 	return (
@@ -25,13 +28,26 @@ export default function CreateForm() {
 						type="text"
 						name="title"
 						id="title"
+						value={title}
 						onChange={event => setTitle(event.target.value)}
 						required
 					/>
 				</fieldset>
-				<fieldset onChange={event => setCategory(event.target.value)}>
+				<fieldset
+					onChange={event => {
+						setCategory(event.target.value);
+						setChecked(false);
+					}}
+				>
 					<legend>Choose the category of your recipe:</legend>
-					<input type="radio" name="category" id="breakfast" value="Breakfast" required />
+					<input
+						type="radio"
+						name="category"
+						id="breakfast"
+						value="Breakfast"
+						required
+						checked={isChecked ? true : false}
+					/>
 					<label htmlFor="breakfast">Breakfast</label>
 					<input type="radio" name="category" id="lunch" value="Lunch" />
 					<label htmlFor="lunch">Lunch</label>
