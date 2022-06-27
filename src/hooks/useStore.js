@@ -29,15 +29,14 @@ const useStore = create(set => ({
 			category: 'Dinner',
 		},
 	],
-	addMeal: (title, category) => {
+	addMeal: newMeal => {
 		set(state => {
 			return {
 				allMeals: [
 					...state.allMeals,
 					{
+						...newMeal,
 						id: nanoid(),
-						title,
-						category,
 					},
 				],
 			};

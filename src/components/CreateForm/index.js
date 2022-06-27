@@ -3,24 +3,23 @@ import {useState} from 'react';
 import useStore from '../../hooks/useStore.js';
 import Button from '../Button/formbutton.js';
 
-import FormContainer from './styled.js';
+import StyledForm from './styled.js';
 
 export default function CreateForm() {
-	const [title, setTitle] = useState('');
-	const [category, setCategory] = useState('');
+	const [newMeal, setNewMeal] = useState({});
 	const [isChecked, setChecked] = useState(true);
 	const addMeal = useStore(state => state.addMeal);
 
 	const handleSubmit = event => {
 		event.preventDefault();
-		addMeal(title, category);
-		setTitle('');
+		addMeal(newMeal);
+		setNewMeal({title: ''});
 		setChecked(true);
 	};
 
 	return (
 		<>
-			<FormContainer onSubmit={handleSubmit}>
+			<StyledForm onSubmit={handleSubmit}>
 				<h2>Plan your next meal!</h2>
 				<fieldset>
 					<label htmlFor="title">Recipe Title:</label>
@@ -28,14 +27,14 @@ export default function CreateForm() {
 						type="text"
 						name="title"
 						id="title"
-						value={title}
-						onChange={event => setTitle(event.target.value)}
+						value={newMeal.title}
+						onChange={event => setNewMeal({...newMeal, title: event.target.value})}
 						required
 					/>
 				</fieldset>
 				<fieldset
 					onChange={event => {
-						setCategory(event.target.value);
+						setNewMeal({...newMeal, category: event.target.value});
 						setChecked(false);
 					}}
 				>
@@ -55,7 +54,7 @@ export default function CreateForm() {
 					<label htmlFor="dinner">Dinner</label>
 				</fieldset>
 				<Button type="submit">Add</Button>
-			</FormContainer>
+			</StyledForm>
 		</>
 	);
 }
