@@ -6,9 +6,16 @@ const MealCardContainer = styled.article`
 	align-items: center;
 	justify-content: center;
 	width: 20em;
-	height: 8em;
-	margin: 1em 0 1em 0;
-	border: solid 0.1em black;
+	height: 15em;
+	margin: 1em auto;
+	border: solid 0.1em #eaeded;
+	border-radius: 1em;
+	background-color: #f2eae3;
+
+	h2 {
+		margin: 0;
+		color: #d4ac0d;
+	}
 `;
 
 export default MealCardContainer;
