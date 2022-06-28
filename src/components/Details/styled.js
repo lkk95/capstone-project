@@ -11,8 +11,8 @@ const StyledDetails = styled.article`
 
 	h2 {
 		font-size: 1rem;
-		font-weight: bold;
 		color: #d4ac0d;
+		font-weight: bold;
 	}
 
 	section {
