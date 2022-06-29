@@ -29,6 +29,44 @@ export default function CreateForm() {
 						onChange={event => setNewMeal({...newMeal, title: event.target.value})}
 						required
 					/>
+					<label htmlFor="ingredients">Ingredients (separated by comma):</label>
+					<textarea
+						name="ingredients"
+						id="ingredients"
+						value={newMeal.ingredients}
+						onChange={event =>
+							setNewMeal({...newMeal, ingredients: event.target.value})
+						}
+						required
+					/>
+					<label htmlFor="preparation">Preparation:</label>
+					<textarea
+						name="preparation"
+						id="preparation"
+						value={newMeal.preparation}
+						onChange={event =>
+							setNewMeal({...newMeal, preparation: event.target.value})
+						}
+						required
+					/>
+					<label htmlFor="servings">Servings:</label>
+					<input
+						type="number"
+						name="servings"
+						id="servings"
+						value={newMeal.servings}
+						onChange={event => setNewMeal({...newMeal, servings: event.target.value})}
+						required
+					/>
+					<label htmlFor="time">Cooking Time:</label>
+					<input
+						type="number"
+						name="time"
+						id="time"
+						value={newMeal.time}
+						onChange={event => setNewMeal({...newMeal, time: event.target.value})}
+						required
+					/>
 				</fieldset>
 				<fieldset
 					onChange={event => {

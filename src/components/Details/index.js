@@ -18,15 +18,19 @@ export default function Details() {
 			<Button />
 			<section>
 				<h2>Ingredients</h2>
+				<p>{meal.ingredients}</p>
 			</section>
 			<section>
 				<h2>Preparation</h2>
+				<p>{meal.preparation}</p>
 			</section>
 			<section>
 				<h2>Servings</h2>
+				<p>{meal.servings}</p>
 			</section>
 			<section>
 				<h2>Cooking Time</h2>
+				<p>{meal.time}</p>
 			</section>
 			<section>
 				<h2>Category</h2>
