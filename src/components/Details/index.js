@@ -1,3 +1,4 @@
+import {nanoid} from 'nanoid';
 import {useParams} from 'react-router-dom';
 
 import useStore from '../../hooks/useStore.js';
@@ -18,7 +19,11 @@ export default function Details() {
 			<Button />
 			<section>
 				<h2>Ingredients</h2>
-				<p>{meal.ingredients}</p>
+				<ul>
+					{meal.ingredients.map(ingredient => {
+						return <li key={nanoid()}>{ingredient}</li>;
+					})}
+				</ul>
 			</section>
 			<section>
 				<h2>Preparation</h2>

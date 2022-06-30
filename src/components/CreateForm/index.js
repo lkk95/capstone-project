@@ -12,7 +12,13 @@ export default function CreateForm() {
 	const handleSubmit = event => {
 		event.preventDefault();
 		addMeal(newMeal);
-		setNewMeal({title: '', ingredients: '', preparation: ''});
+		setNewMeal({
+			title: '',
+			ingredients: '',
+			preparation: '',
+			servings: '',
+			time: '',
+		});
 	};
 
 	return (
@@ -35,7 +41,7 @@ export default function CreateForm() {
 						id="ingredients"
 						value={newMeal.ingredients}
 						onChange={event =>
-							setNewMeal({...newMeal, ingredients: event.target.value})
+							setNewMeal({...newMeal, ingredients: event.target.value.split(',')})
 						}
 						required
 					/>
