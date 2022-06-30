@@ -17,7 +17,7 @@ export default function Details() {
 		<StyledDetails>
 			<h1>{meal.title}</h1>
 			<Button />
-			<section>
+			<section clasName="ingredients">
 				<h2>Ingredients</h2>
 				<ul>
 					{meal.ingredients.map(ingredient => {

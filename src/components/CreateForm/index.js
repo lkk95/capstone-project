@@ -25,21 +25,23 @@ export default function CreateForm() {
 		<>
 			<StyledForm onSubmit={handleSubmit}>
 				<h2>Plan your next meal!</h2>
-				<fieldset>
+				<fieldset className="inputfieldset">
 					<label htmlFor="title">Recipe Title:</label>
 					<input
 						type="text"
 						name="title"
 						id="title"
 						value={newMeal.title}
+						placeholder="Summer Salad"
 						onChange={event => setNewMeal({...newMeal, title: event.target.value})}
 						required
 					/>
-					<label htmlFor="ingredients">Ingredients (separated by comma):</label>
+					<label htmlFor="ingredients">Ingredients:</label>
 					<textarea
 						name="ingredients"
 						id="ingredients"
 						value={newMeal.ingredients}
+						placeholder="1 cucumber, 2 carrots,..."
 						onChange={event =>
 							setNewMeal({...newMeal, ingredients: event.target.value.split(',')})
 						}
@@ -50,6 +52,7 @@ export default function CreateForm() {
 						name="preparation"
 						id="preparation"
 						value={newMeal.preparation}
+						placeholder="Cut vegetables. Then..."
 						onChange={event =>
 							setNewMeal({...newMeal, preparation: event.target.value})
 						}
@@ -61,20 +64,22 @@ export default function CreateForm() {
 						name="servings"
 						id="servings"
 						value={newMeal.servings}
+						placeholder="1"
 						onChange={event => setNewMeal({...newMeal, servings: event.target.value})}
 						required
 					/>
-					<label htmlFor="time">Cooking Time (minutes):</label>
+					<label htmlFor="time">Cooking Time:</label>
 					<input
 						type="number"
 						name="time"
 						id="time"
 						value={newMeal.time}
+						placeholder="min"
 						onChange={event => setNewMeal({...newMeal, time: event.target.value})}
-						required
 					/>
 				</fieldset>
 				<fieldset
+					className="radiofieldset"
 					onChange={event => {
 						setNewMeal({...newMeal, category: event.target.value});
 					}}
