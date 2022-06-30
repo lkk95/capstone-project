@@ -33,11 +33,11 @@ const StyledForm = styled.form`
 			text-align: center;
 		}
 		input[type='number'] {
+			width: 30%;
+			margin: 0 auto;
 			padding: 0.5em;
 			border: 0;
 			border-radius: 0.4em;
-			width: 30%;
-			margin: 0 auto;
 			text-align: center;
 		}
 	}
