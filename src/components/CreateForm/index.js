@@ -12,7 +12,7 @@ export default function CreateForm() {
 	const handleSubmit = event => {
 		event.preventDefault();
 		addMeal(newMeal);
-		setNewMeal({title: ''});
+		setNewMeal({title: '', ingredients: '', preparation: ''});
 	};
 
 	return (
@@ -58,7 +58,7 @@ export default function CreateForm() {
 						onChange={event => setNewMeal({...newMeal, servings: event.target.value})}
 						required
 					/>
-					<label htmlFor="time">Cooking Time:</label>
+					<label htmlFor="time">Cooking Time (minutes):</label>
 					<input
 						type="number"
 						name="time"
