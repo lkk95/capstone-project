@@ -62,6 +62,15 @@ const useStore = create(set => ({
 			};
 		});
 	},
+	editMeal: (newTitle, newCategory, id) => {
+		set(state => {
+			return {
+				allMeals: state.allMeals.map(meal =>
+					meal.id === id ? {...meal, title: newTitle, category: newCategory} : meal
+				),
+			};
+		});
+	},
 }));
 
 export default useStore;
