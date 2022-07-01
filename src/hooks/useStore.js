@@ -70,6 +70,13 @@ const useStore = create(set => ({
 			};
 		});
 	},
+	toggleModal: () => {
+		set(state => {
+			return {
+				showModal: !state.showModal,
+			};
+		});
+	},
 }));
 
 export default useStore;
