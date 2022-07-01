@@ -62,12 +62,10 @@ const useStore = create(set => ({
 			};
 		});
 	},
-	editMeal: (newTitle, newCategory, id) => {
+	editMeal: (newMeal, id) => {
 		set(state => {
 			return {
-				allMeals: state.allMeals.map(meal =>
-					meal.id === id ? {...meal, title: newTitle, category: newCategory} : meal
-				),
+				allMeals: state.allMeals.map(meal => (meal.id === id ? {id, newMeal} : meal)),
 			};
 		});
 	},
