@@ -1,7 +1,7 @@
 import {useState} from 'react';
 
 import useStore from '../../hooks/useStore.js';
-import Button from '../Button/formbutton.js';
+import FormButton from '../Button/formbutton.js';
 
 import Radio from './radio.js';
 import StyledForm from './styledform.js';
@@ -29,7 +29,7 @@ export default function CreateForm() {
 				<h2>Plan your next meal!</h2>
 				<TextInput newMeal={newMeal} setNewMeal={setNewMeal} />
 				<Radio newMeal={newMeal} setNewMeal={setNewMeal} />
-				<Button type="submit">Add</Button>
+				<FormButton type="submit" />
 			</StyledForm>
 		</>
 	);

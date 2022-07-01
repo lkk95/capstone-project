@@ -2,7 +2,7 @@ import {nanoid} from 'nanoid';
 import {useParams} from 'react-router-dom';
 
 import useStore from '../../hooks/useStore.js';
-import Button from '../Button/backbutton.js';
+import BackButton from '../Button/backbutton.js';
 
 import StyledDetails from './styled.js';
 
@@ -16,7 +16,7 @@ export default function Details() {
 	return (
 		<StyledDetails>
 			<h1>{meal.title}</h1>
-			<Button />
+			<BackButton />
 			<section>
 				<h2>Ingredients</h2>
 				<ul>

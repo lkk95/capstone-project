@@ -1,5 +1,5 @@
-import StyledButton from './styled.js';
+import StyledButton from './styledbutton.js';
 
-export default function Button() {
+export default function FormButton() {
 	return <StyledButton>Add</StyledButton>;
 }
