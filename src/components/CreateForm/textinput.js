@@ -2,7 +2,7 @@ import StyledTextInput from './styledtextinput.js';
 
 export default function TextInput({newMeal, setNewMeal}) {
 	return (
-		<StyledTextInput className="inputfieldset">
+		<StyledTextInput>
 			<label htmlFor="title">Recipe Title:</label>
 			<input
 				type="text"

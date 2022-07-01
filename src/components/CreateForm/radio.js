@@ -3,7 +3,6 @@ import StyledRadio from './styledradio.js';
 export default function Radio({newMeal, setNewMeal}) {
 	return (
 		<StyledRadio
-			className="radiofieldset"
 			onChange={event => {
 				setNewMeal({...newMeal, category: event.target.value});
 			}}
