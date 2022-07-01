@@ -15,7 +15,6 @@ export default function HomePage() {
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
 			<CreateForm />
-			<h1>Your planned meals</h1>
 			<section>
 				{allMeals.map(meal => {
 					return <MealCard key={meal.id} id={meal.id} />;

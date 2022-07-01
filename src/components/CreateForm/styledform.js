@@ -16,19 +16,8 @@ const StyledForm = styled.form`
 		font-size: 1.2rem;
 	}
 
-	fieldset {
-		display: flex;
-		justify-content: space-evenly;
-		border: 0;
-	}
-
 	label {
 		margin-right: 1em;
-	}
-
-	input {
-		border: 0;
-		border-radius: 0.4em;
 	}
 `;
 

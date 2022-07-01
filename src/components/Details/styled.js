@@ -10,8 +10,8 @@ const StyledDetails = styled.article`
 	background-color: #f2eae3;
 
 	h2 {
-		font-size: 1rem;
 		color: #d4ac0d;
+		font-size: 1rem;
 		font-weight: bold;
 	}
 
