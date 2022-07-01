@@ -49,6 +49,7 @@ const useStore = create(set => ({
 			time: 1.5,
 		},
 	],
+	showModal: false,
 	addMeal: newMeal => {
 		set(state => {
 			return {
