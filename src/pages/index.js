@@ -2,7 +2,7 @@ import {Helmet} from 'react-helmet';
 
 import CreateForm from '../components/CreateForm/index.js';
 import Layout from '../components/Layout/index.js';
-import MealCard from '../components/MealCard/MealCard.js';
+import MealCard from '../components/MealCard/index.js';
 import useStore from '../hooks/useStore.js';
 
 export default function HomePage() {

@@ -1,6 +1,5 @@
 import useStore from '../../hooks/useStore.js';
 import CardButton from '../Button/cardbutton.js';
-import EditButton from '../Button/editbutton.js';
 
 import MealCardContainer from './styled.js';
 
@@ -13,7 +12,6 @@ export default function MealCard({id}) {
 			<h2>{meal.title}</h2>
 			<p>{meal.category}</p>
 			<CardButton id={meal.id} />
-			<EditButton />
 		</MealCardContainer>
 	);
 }

@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom';
 
 import useStore from '../../hooks/useStore.js';
 import BackButton from '../Button/backbutton.js';
+import EditButton from '../Button/editbutton.js';
 
 import StyledDetails from './styled.js';
 
@@ -17,6 +18,7 @@ export default function Details() {
 		<StyledDetails>
 			<h1>{meal.title}</h1>
 			<BackButton />
+			<EditButton />
 			<section>
 				<h2>Ingredients</h2>
 				<ul>
