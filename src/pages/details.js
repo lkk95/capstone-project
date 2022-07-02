@@ -1,7 +1,7 @@
 import {Helmet} from 'react-helmet';
 
 import Details from '../components/Details/index.js';
-import Form from '../components/Form/editform.js';
+import EditForm from '../components/EditForm/index.js';
 import Layout from '../components/Layout/index.js';
 import useStore from '../hooks/useStore.js';
 
@@ -14,7 +14,7 @@ export default function Detailpage() {
 				<title key="title">Details</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
-			{showModal ? <Form /> : null}
+			{showModal ? <EditForm /> : null}
 			<Details />
 		</Layout>
 	);

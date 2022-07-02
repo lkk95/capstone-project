@@ -3,12 +3,11 @@ import {useState} from 'react';
 import useStore from '../../hooks/useStore.js';
 import CancelButton from '../Button/cancelbutton.js';
 import SaveButton from '../Button/savebutton.js';
+import Radio from '../EditForm/radio.js';
+import StyledForm from '../EditForm/styledform.js';
+import TextInput from '../EditForm/textinput.js';
 
-import Radio from './radio.js';
-import StyledForm from './styledform.js';
-import TextInput from './textinput.js';
-
-export default function Form() {
+export default function EditForm() {
 	const [newMeal, setNewMeal] = useState({});
 	const addMeal = useStore(state => state.addMeal);
 
@@ -27,7 +26,7 @@ export default function Form() {
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit}>
-				<h2>Plan your next meal!</h2>
+				<h2>Edit your meal!</h2>
 				<TextInput newMeal={newMeal} setNewMeal={setNewMeal} />
 				<Radio newMeal={newMeal} setNewMeal={setNewMeal} />
 				<SaveButton type="submit" />

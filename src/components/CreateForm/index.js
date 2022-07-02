@@ -7,7 +7,7 @@ import Radio from './radio.js';
 import StyledForm from './styledform.js';
 import TextInput from './textinput.js';
 
-export default function Form() {
+export default function CreateForm() {
 	const [newMeal, setNewMeal] = useState({});
 	const addMeal = useStore(state => state.addMeal);
 
