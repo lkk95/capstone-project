@@ -1,12 +1,8 @@
 import StyledRadio from './styledradio.js';
 
-export default function Radio({newMeal, setNewMeal}) {
+export default function Radio({meal}) {
 	return (
-		<StyledRadio
-			onChange={event => {
-				setNewMeal({...newMeal, category: event.target.value});
-			}}
-		>
+		<StyledRadio onChange={event => {}}>
 			<legend>Choose the category of your recipe:</legend>
 			<input type="radio" name="category" id="breakfast" value="Breakfast" required />
 			<label htmlFor="breakfast">Breakfast</label>

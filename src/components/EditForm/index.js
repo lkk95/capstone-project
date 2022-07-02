@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {useParams} from 'react-router-dom';
 
 import useStore from '../../hooks/useStore.js';
 import CancelButton from '../Button/cancelbutton.js';
@@ -8,8 +9,13 @@ import StyledForm from '../EditForm/styledform.js';
 import TextInput from '../EditForm/textinput.js';
 
 export default function EditForm() {
-	const [newMeal, setNewMeal] = useState({});
 	const addMeal = useStore(state => state.addMeal);
+	const allMeals = useStore(state => state.allMeals);
+
+	const [newMeal, setNewMeal] = useState({});
+	const {idFromUrl} = useParams();
+
+	const meal = allMeals.find(meal => meal.id === idFromUrl);
 
 	const handleSubmit = event => {
 		event.preventDefault();
@@ -27,8 +33,8 @@ export default function EditForm() {
 		<>
 			<StyledForm onSubmit={handleSubmit}>
 				<h2>Edit your meal!</h2>
-				<TextInput newMeal={newMeal} setNewMeal={setNewMeal} />
-				<Radio newMeal={newMeal} setNewMeal={setNewMeal} />
+				<TextInput meal={meal} />
+				<Radio meal={meal} />
 				<SaveButton type="submit" />
 				<CancelButton />
 			</StyledForm>
