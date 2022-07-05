@@ -6,7 +6,7 @@ import Layout from '../components/Layout/index.js';
 import useStore from '../hooks/useStore.js';
 
 export default function Detailpage() {
-	const showModal = useStore(state => state.showModal);
+	const isEditing = useStore(state => state.isEditing);
 
 	return (
 		<Layout>
@@ -14,8 +14,7 @@ export default function Detailpage() {
 				<title key="title">Details</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
-			{showModal ? <EditForm /> : null}
-			<Details />
+			{isEditing ? <EditForm /> : <Details />}
 		</Layout>
 	);
 }

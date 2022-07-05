@@ -21,11 +21,7 @@ export default function Details() {
 			<EditButton />
 			<section>
 				<h2>Ingredients</h2>
-				<ul>
-					{meal.ingredients.map(ingredient => {
-						return <li key={nanoid()}>{ingredient}</li>;
-					})}
-				</ul>
+				<p>{meal.ingredients}</p>
 			</section>
 			<section>
 				<h2>Preparation</h2>

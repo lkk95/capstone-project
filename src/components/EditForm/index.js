@@ -9,32 +9,28 @@ import StyledForm from '../EditForm/styledform.js';
 import TextInput from '../EditForm/textinput.js';
 
 export default function EditForm() {
-	const addMeal = useStore(state => state.addMeal);
+	const editMeal = useStore(state => state.editMeal);
 	const allMeals = useStore(state => state.allMeals);
+	const setEditing = useStore(state => state.setEditing);
 
-	const [newMeal, setNewMeal] = useState({});
 	const {idFromUrl} = useParams();
 
 	const meal = allMeals.find(meal => meal.id === idFromUrl);
 
+	const [editedMeal, setEditedMeal] = useState({...meal});
+
 	const handleSubmit = event => {
 		event.preventDefault();
-		addMeal(newMeal);
-		setNewMeal({
-			title: '',
-			ingredients: '',
-			preparation: '',
-			servings: '',
-			time: '',
-		});
+		editMeal(editedMeal, idFromUrl);
+		setEditing(false);
 	};
 
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit}>
 				<h2>Edit your meal!</h2>
-				<TextInput meal={meal} />
-				<Radio meal={meal} />
+				<TextInput meal={meal} editedMeal={editedMeal} setEditedMeal={setEditedMeal} />
+				<Radio editedMeal={editedMeal} setEditedMeal={setEditedMeal} />
 				<SaveButton type="submit" />
 				<CancelButton />
 			</StyledForm>

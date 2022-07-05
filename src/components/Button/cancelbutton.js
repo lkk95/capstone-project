@@ -3,7 +3,11 @@ import useStore from '../../hooks/useStore.js';
 import StyledButton from './styledbutton.js';
 
 export default function CancelButton() {
-	const toggleModal = useStore(state => state.toggleModal);
+	const setEditing = useStore(state => state.setEditing);
 
-	return <StyledButton onClick={() => toggleModal()}>Cancel</StyledButton>;
+	return (
+		<StyledButton type="button" onClick={() => setEditing(false)}>
+			Cancel
+		</StyledButton>
+	);
 }

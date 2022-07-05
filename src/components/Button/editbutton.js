@@ -3,10 +3,10 @@ import useStore from '../../hooks/useStore.js';
 import StyledEdit from './stylededit';
 
 export default function EditButton() {
-	const toggleModal = useStore(state => state.toggleModal);
+	const setEditing = useStore(state => state.setEditing);
 
 	return (
-		<StyledEdit onClick={() => toggleModal()}>
+		<StyledEdit onClick={() => setEditing(true)}>
 			<i className="fa-solid fa-pen"></i>
 		</StyledEdit>
 	);
