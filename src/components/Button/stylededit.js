@@ -5,11 +5,8 @@ const StyledEdit = styled.button`
 	border: 0;
 	cursor: pointer;
 	margin-top: 1em;
-
-	i {
-		width: 1em;
-		height: 1em;
-	}
+	font-size: 1.3rem;
+	color: #882d17;
 `;
 
 export default StyledEdit;
