@@ -7,48 +7,49 @@ const useStore = create(set => ({
 			id: nanoid(),
 			title: 'Spaghetti Carbonara',
 			category: 'Dinner',
-			ingredients: [],
-			preparation: '',
+			ingredients: 'ingredient1, ingredient2, ingredient3',
+			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
-			time: 1.5,
+			time: 60,
 		},
 		{
 			id: nanoid(),
 			title: 'Blueberry Pancakes',
 			category: 'Breakfast',
-			ingredients: [],
-			preparation: '',
+			ingredients: 'ingredient1, ingredient2, ingredient3',
+			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
-			time: 1.5,
+			time: 60,
 		},
 		{
 			id: nanoid(),
 			title: 'Greek Salad',
 			category: 'Lunch',
-			ingredients: [],
-			preparation: '',
+			ingredients: 'ingredient1, ingredient2, ingredient3',
+			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
-			time: 1.5,
+			time: 60,
 		},
 		{
 			id: nanoid(),
 			title: 'Pea Soup',
 			category: 'Lunch',
-			ingredients: [],
-			preparation: '',
+			ingredients: 'ingredient1, ingredient2, ingredient3',
+			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
-			time: 1.5,
+			time: 60,
 		},
 		{
 			id: nanoid(),
 			title: 'Enchiladas',
 			category: 'Dinner',
-			ingredients: [],
-			preparation: '',
+			ingredients: 'ingredient1, ingredient2, ingredient3',
+			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
-			time: 1.5,
+			time: 60,
 		},
 	],
+	isEditing: false,
 	addMeal: newMeal => {
 		set(state => {
 			return {
@@ -59,6 +60,22 @@ const useStore = create(set => ({
 						id: nanoid(),
 					},
 				],
+			};
+		});
+	},
+	editMeal: (editedMeal, idFromUrl) => {
+		set(state => {
+			return {
+				allMeals: state.allMeals.map(meal =>
+					meal.id === idFromUrl ? {...editedMeal} : meal
+				),
+			};
+		});
+	},
+	setEditing: () => {
+		set(state => {
+			return {
+				isEditing: !state.isEditing,
 			};
 		});
 	},
