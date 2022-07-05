@@ -29,7 +29,7 @@ export default function EditForm() {
 		<>
 			<StyledForm onSubmit={handleSubmit}>
 				<h2>Edit your meal!</h2>
-				<TextInput meal={meal} editedMeal={editedMeal} setEditedMeal={setEditedMeal} />
+				<TextInput editedMeal={editedMeal} setEditedMeal={setEditedMeal} />
 				<Radio editedMeal={editedMeal} setEditedMeal={setEditedMeal} />
 				<SaveButton type="submit" />
 				<CancelButton />

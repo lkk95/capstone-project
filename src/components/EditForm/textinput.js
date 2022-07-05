@@ -1,6 +1,6 @@
 import StyledTextInput from './styledtextinput.js';
 
-export default function TextInput({meal, editedMeal, setEditedMeal}) {
+export default function TextInput({editedMeal, setEditedMeal}) {
 	return (
 		<StyledTextInput>
 			<label htmlFor="title">Recipe Title:</label>
@@ -18,6 +18,7 @@ export default function TextInput({meal, editedMeal, setEditedMeal}) {
 				id="ingredients"
 				value={editedMeal.ingredients}
 				onChange={event => setEditedMeal({...editedMeal, ingredients: event.target.value})}
+				required
 			/>
 			<label htmlFor="preparation">Preparation:</label>
 			<textarea

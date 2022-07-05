@@ -1,4 +1,3 @@
-import {nanoid} from 'nanoid';
 import {useParams} from 'react-router-dom';
 
 import useStore from '../../hooks/useStore.js';

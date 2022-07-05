@@ -19,9 +19,7 @@ export default function TextInput({newMeal, setNewMeal}) {
 				id="ingredients"
 				value={newMeal.ingredients}
 				placeholder="1 cucumber, 2 carrots,..."
-				onChange={event =>
-					setNewMeal({...newMeal, ingredients: event.target.value.split(',')})
-				}
+				onChange={event => setNewMeal({...newMeal, ingredients: event.target.value})}
 				required
 			/>
 			<label htmlFor="preparation">Preparation:</label>
