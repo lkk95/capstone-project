@@ -2,7 +2,6 @@ import {useParams, useNavigate} from 'react-router-dom';
 
 import useStore from '../../hooks/useStore.js';
 import Button from '../Button/Button.js';
-import IconButton from '../Button/IconButton.js';
 
 import StyledDetails from './styled.js';
 
@@ -22,16 +21,17 @@ export default function Details() {
 				Go Back
 			</Button>
 			<div>
-				<IconButton functionToClick={setEditing} parameterToClick={true}>
+				<Button functionToClick={setEditing} parameterToClick={true} isIcon>
 					<i className="fa-solid fa-pen"></i>
-				</IconButton>
-				<IconButton
+				</Button>
+				<Button
 					functionToClick={deleteMeal}
 					parameterToClick={idFromUrl}
 					buttonMode={'delete'}
+					isIcon
 				>
 					<i className="fa-solid fa-trash"></i>
-				</IconButton>
+				</Button>
 			</div>
 			<section>
 				<h2>Ingredients</h2>
