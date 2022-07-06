@@ -20,7 +20,7 @@ export default function Details() {
 			<BackButton />
 			<div>
 				<EditButton />
-				<DeleteButton />
+				<DeleteButton id={meal.id} />
 			</div>
 			<section>
 				<h2>Ingredients</h2>
