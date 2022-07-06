@@ -1,14 +1,15 @@
-import {useParams} from 'react-router-dom';
+import {useParams, useNavigate} from 'react-router-dom';
 
 import useStore from '../../hooks/useStore.js';
-import BackButton from '../Button/backbutton.js';
-import EditButton from '../Button/editbutton.js';
+import Button from '../Button/Button.js';
 
 import StyledDetails from './styled.js';
 
 export default function Details() {
 	const allMeals = useStore(state => state.allMeals);
-
+	const deleteMeal = useStore(state => state.deleteMeal);
+	const setEditing = useStore(state => state.setEditing);
+	const navigate = useNavigate();
 	const {idFromUrl} = useParams();
 
 	const meal = allMeals.find(meal => meal.id === idFromUrl);
@@ -16,8 +17,22 @@ export default function Details() {
 	return (
 		<StyledDetails>
 			<h1>{meal.title}</h1>
-			<BackButton />
-			<EditButton />
+			<Button functionToClick={navigate} parameterToClick={'/'}>
+				Go Back
+			</Button>
+			<div>
+				<Button functionToClick={setEditing} parameterToClick={true} isIcon>
+					<i className="fa-solid fa-pen"></i>
+				</Button>
+				<Button
+					functionToClick={deleteMeal}
+					parameterToClick={idFromUrl}
+					buttonMode={'delete'}
+					isIcon
+				>
+					<i className="fa-solid fa-trash"></i>
+				</Button>
+			</div>
 			<section>
 				<h2>Ingredients</h2>
 				<p>{meal.ingredients}</p>
