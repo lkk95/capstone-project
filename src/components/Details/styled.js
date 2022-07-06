@@ -15,6 +15,12 @@ const StyledDetails = styled.article`
 		font-weight: bold;
 	}
 
+	div {
+		display: flex;
+		gap: 1em;
+		margin-top: 1.5em;
+	}
+
 	section {
 		margin: 3em 0;
 		border-bottom: solid 0.1em black;

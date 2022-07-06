@@ -1,6 +1,6 @@
 import useStore from '../../hooks/useStore.js';
 
-import StyledEdit from './stylededit';
+import StyledEdit from './styledicon';
 
 export default function EditButton() {
 	const setEditing = useStore(state => state.setEditing);
