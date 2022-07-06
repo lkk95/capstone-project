@@ -2,8 +2,7 @@ import {useState} from 'react';
 import {useParams} from 'react-router-dom';
 
 import useStore from '../../hooks/useStore.js';
-import CancelButton from '../Button/cancelbutton.js';
-import SaveButton from '../Button/savebutton.js';
+import Button from '../Button/Button.js';
 import Radio from '../EditForm/radio.js';
 import StyledForm from '../EditForm/styledform.js';
 import TextInput from '../EditForm/textinput.js';
@@ -31,8 +30,10 @@ export default function EditForm() {
 				<h2>Edit your meal!</h2>
 				<TextInput editedMeal={editedMeal} setEditedMeal={setEditedMeal} />
 				<Radio editedMeal={editedMeal} setEditedMeal={setEditedMeal} />
-				<SaveButton type="submit" />
-				<CancelButton />
+				<Button buttonMode={'submit'}>Save</Button>
+				<Button functionToClick={setEditing} parameterToClick={false}>
+					Cancel
+				</Button>
 			</StyledForm>
 		</>
 	);
