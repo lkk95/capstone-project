@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledEdit = styled.button`
+const StyledIcon = styled.button`
 	border: 0;
 	background-color: #f2eae3;
 	color: #882d17;
@@ -8,4 +8,4 @@ const StyledEdit = styled.button`
 	cursor: pointer;
 `;
 
-export default StyledEdit;
+export default StyledIcon;

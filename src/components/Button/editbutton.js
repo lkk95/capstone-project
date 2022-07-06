@@ -1,13 +1,13 @@
 import useStore from '../../hooks/useStore.js';
 
-import StyledEdit from './styledicon';
+import StyledIcon from './styledicon';
 
 export default function EditButton() {
 	const setEditing = useStore(state => state.setEditing);
 
 	return (
-		<StyledEdit onClick={() => setEditing(true)}>
+		<StyledIcon onClick={() => setEditing(true)}>
 			<i className="fa-solid fa-pen"></i>
-		</StyledEdit>
+		</StyledIcon>
 	);
 }

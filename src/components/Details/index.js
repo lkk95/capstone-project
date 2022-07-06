@@ -1,4 +1,4 @@
-import {useParams} from 'react-router-dom';
+import {useParams, useNavigate} from 'react-router-dom';
 
 import useStore from '../../hooks/useStore.js';
 import BackButton from '../Button/backbutton.js';
@@ -9,7 +9,9 @@ import StyledDetails from './styled.js';
 
 export default function Details() {
 	const allMeals = useStore(state => state.allMeals);
+	const deleteMeal = useStore(state => state.deleteMeal);
 
+	const navigate = useNavigate();
 	const {idFromUrl} = useParams();
 
 	const meal = allMeals.find(meal => meal.id === idFromUrl);
@@ -20,7 +22,12 @@ export default function Details() {
 			<BackButton />
 			<div>
 				<EditButton />
-				<DeleteButton id={meal.id} />
+				<DeleteButton
+					onClick={() => {
+						deleteMeal(idFromUrl);
+						navigate('/');
+					}}
+				/>
 			</div>
 			<section>
 				<h2>Ingredients</h2>

@@ -72,10 +72,10 @@ const useStore = create(set => ({
 			};
 		});
 	},
-	deleteMeal: id => {
+	deleteMeal: idFromUrl => {
 		set(state => {
 			return {
-				allMeals: state.allMeals.filter(meal => meal.id !== id),
+				allMeals: state.allMeals.filter(meal => meal.id !== idFromUrl),
 			};
 		});
 	},
