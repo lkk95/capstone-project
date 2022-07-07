@@ -5,7 +5,7 @@ import EditForm from '../components/EditForm/index.js';
 import Layout from '../components/Layout/index.js';
 import useStore from '../hooks/useStore.js';
 
-export default function Detailpage() {
+export default function DetailPage() {
 	const isEditing = useStore(state => state.isEditing);
 
 	return (

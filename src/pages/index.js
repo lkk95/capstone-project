@@ -11,7 +11,7 @@ export default function HomePage() {
 	return (
 		<Layout>
 			<Helmet>
-				<title key="title">MealsByMe</title>
+				<title key="title">PlatePlan</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
 			<CreateForm />
