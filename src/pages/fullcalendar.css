@@ -1,0 +1,41 @@
+.fc {
+	width: 22.5em;
+}
+.fc-daygrid {
+	height: 20em;
+}
+.fc .fc-toolbar.fc-header-toolbar {
+	height: 4em;
+	background-color: #606c38;
+	margin: 0;
+	color: #fefae0;
+}
+.fc .fc-toolbar.fc-header-toolbar h2 {
+	font-size: 1em;
+	margin: 0 1em;
+}
+.fc .fc-toolbar.fc-header-toolbar button {
+	height: 2.5em;
+	margin: 0 1em;
+	border: 0.2em solid #b8874f;
+	background-color: #dda15e;
+	color: #fefae0;
+	opacity: 1;
+}
+.fc .fc-toolbar.fc-footer-toolbar {
+	padding-top: 2em;
+}
+.fc .fc-toolbar.fc-footer-toolbar button {
+	height: 2.5em;
+	border: 0.2em solid #c69051;
+	background-color: #dda15e;
+	color: #fefae0;
+	opacity: 1;
+}
+.fc .fc-toolbar.fc-footer-toolbar button:enabled {
+	height: 2.5em;
+	border: 0.2em solid #c69051;
+	background-color: #dda15e;
+	color: #fefae0;
+	opacity: 1;
+}
