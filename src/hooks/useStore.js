@@ -6,7 +6,7 @@ const useStore = create(set => ({
 		{
 			id: nanoid(),
 			title: 'Spaghetti Carbonara',
-			category: 'Dinner',
+			category: 'C - Dinner',
 			ingredients: 'ingredient1, ingredient2, ingredient3',
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
@@ -17,7 +17,7 @@ const useStore = create(set => ({
 		{
 			id: nanoid(),
 			title: 'Blueberry Pancakes',
-			category: 'Breakfast',
+			category: 'A - Breakfast',
 			ingredients: 'ingredient1, ingredient2, ingredient3',
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
@@ -28,7 +28,7 @@ const useStore = create(set => ({
 		{
 			id: nanoid(),
 			title: 'Greek Salad',
-			category: 'Lunch',
+			category: 'B - Lunch',
 			ingredients: 'ingredient1, ingredient2, ingredient3',
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
@@ -39,7 +39,7 @@ const useStore = create(set => ({
 		{
 			id: nanoid(),
 			title: 'Pea Soup',
-			category: 'Lunch',
+			category: 'B - Lunch',
 			ingredients: 'ingredient1, ingredient2, ingredient3',
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
@@ -50,12 +50,12 @@ const useStore = create(set => ({
 		{
 			id: nanoid(),
 			title: 'Enchiladas',
-			category: 'Dinner',
+			category: 'C - Dinner',
 			ingredients: 'ingredient1, ingredient2, ingredient3',
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
 			time: 60,
-			start: '2022-07-09',
+			start: '2022-07-08',
 			color: '#0B4870',
 		},
 	],

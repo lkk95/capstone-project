@@ -34,6 +34,7 @@ export default function PlannerPage() {
 					},
 				}}
 				events={allMeals}
+				eventOrder={'category'}
 			/>
 		</Layout>
 	);

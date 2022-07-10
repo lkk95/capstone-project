@@ -8,11 +8,11 @@ export default function Radio({newMeal, setNewMeal}) {
 			}}
 		>
 			<legend>Choose the category of your recipe:</legend>
-			<input type="radio" name="category" id="breakfast" value="Breakfast" required />
+			<input type="radio" name="category" id="breakfast" value="A - Breakfast" required />
 			<label htmlFor="breakfast">Breakfast</label>
-			<input type="radio" name="category" id="lunch" value="Lunch" />
+			<input type="radio" name="category" id="lunch" value="B - Lunch" />
 			<label htmlFor="lunch">Lunch</label>
-			<input type="radio" name="category" id="dinner" value="Dinner" />
+			<input type="radio" name="category" id="dinner" value="C - Dinner" />
 			<label htmlFor="dinner">Dinner</label>
 		</StyledRadio>
 	);
