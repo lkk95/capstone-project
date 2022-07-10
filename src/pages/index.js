@@ -6,8 +6,10 @@ import MealCard from '../components/MealCard/index.js';
 import useStore from '../hooks/useStore.js';
 
 export default function HomePage() {
-	const allMeals = useStore(state => state.allMeals);
-
+	//const allMeals = useStore(state => state.allMeals);
+	//{allMeals.map(meal => {
+	//return <MealCard key={meal.id} id={meal.id} />;
+	//})}
 	return (
 		<Layout>
 			<Helmet>
@@ -15,11 +17,7 @@ export default function HomePage() {
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
 			<CreateForm />
-			<section>
-				{allMeals.map(meal => {
-					return <MealCard key={meal.id} id={meal.id} />;
-				})}
-			</section>
+			<section></section>
 		</Layout>
 	);
 }

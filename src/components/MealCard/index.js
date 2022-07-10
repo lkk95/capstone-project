@@ -5,17 +5,13 @@ import Button from '../Button/Button.js';
 
 import MealCardContainer from './styled.js';
 
-export default function MealCard({id}) {
-	const allMeals = useStore(state => state.allMeals);
-	const meal = allMeals.find(meal => meal.id === id);
-
+export default function MealCard({currentMeal}) {
 	const navigate = useNavigate();
 
 	return (
 		<MealCardContainer>
-			<h2>{meal.title}</h2>
-			<p>{meal.category}</p>
-			<Button functionToClick={navigate} parameterToClick={'/' + id}>
+			<h2>{currentMeal.title}</h2>
+			<Button functionToClick={navigate} parameterToClick={'/' + currentMeal.id}>
 				Details
 			</Button>
 		</MealCardContainer>
