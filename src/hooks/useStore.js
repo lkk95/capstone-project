@@ -11,6 +11,8 @@ const useStore = create(set => ({
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
 			time: 60,
+			start: '2022-07-05',
+			color: '#0B4870',
 		},
 		{
 			id: nanoid(),
@@ -20,6 +22,8 @@ const useStore = create(set => ({
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
 			time: 60,
+			start: '2022-07-06',
+			color: '#DDA15E',
 		},
 		{
 			id: nanoid(),
@@ -29,6 +33,8 @@ const useStore = create(set => ({
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
 			time: 60,
+			start: '2022-07-06',
+			color: '#606C38',
 		},
 		{
 			id: nanoid(),
@@ -38,6 +44,8 @@ const useStore = create(set => ({
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
 			time: 60,
+			start: '2022-07-08',
+			color: '#606C38',
 		},
 		{
 			id: nanoid(),
@@ -47,6 +55,8 @@ const useStore = create(set => ({
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
 			time: 60,
+			start: '2022-07-09',
+			color: '#0B4870',
 		},
 	],
 	isEditing: false,

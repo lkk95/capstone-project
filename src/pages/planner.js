@@ -25,7 +25,7 @@ export default function PlannerPage() {
 					right: 'newMeal',
 				}}
 				footerToolbar={{
-					left: 'dayGridMonth,dayGridDay',
+					left: 'dayGridWeek,dayGridDay',
 					right: 'prev,next',
 				}}
 				customButtons={{
@@ -33,8 +33,7 @@ export default function PlannerPage() {
 						text: 'New',
 					},
 				}}
-				selectable={true}
-				selectLongPressDelay={1}
+				events={allMeals}
 			/>
 		</Layout>
 	);
