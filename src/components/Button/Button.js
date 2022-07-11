@@ -1,5 +1,7 @@
 import {useNavigate} from 'react-router-dom';
 
+import useStore from '../../hooks/useStore.js';
+
 import StyledButton from './styledbutton.js';
 import StyledIcon from './styledicon';
 
@@ -10,6 +12,7 @@ export default function Button({
 	buttonMode = 'default',
 	isIcon,
 }) {
+	const setShowModal = useStore(state => state.setShowModal);
 	const navigate = useNavigate();
 
 	return (
@@ -27,6 +30,7 @@ export default function Button({
 				<StyledButton
 					onClick={() => {
 						buttonMode !== 'submit' && functionToClick(parameterToClick);
+						buttonMode === 'goback' && setShowModal();
 					}}
 				>
 					{children}
