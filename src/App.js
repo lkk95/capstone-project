@@ -1,7 +1,8 @@
 import {Routes, Route} from 'react-router-dom';
 
-import Home from './pages';
-import Details from './pages/details.js';
+import HomePage from './pages';
+import DetailPage from './pages/details.js';
+import PlannerPage from './pages/planner.js';
 import {GlobalStyle} from './styles';
 
 export default function App() {
@@ -9,8 +10,16 @@ export default function App() {
 		<>
 			<GlobalStyle />
 			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/:idFromUrl" element={<Details />} />
+				<Route
+					path="/"
+					element={
+						<>
+							<HomePage />
+							<PlannerPage />
+						</>
+					}
+				/>
+				<Route path="/:idFromUrl" element={<DetailPage />} />
 			</Routes>
 		</>
 	);
