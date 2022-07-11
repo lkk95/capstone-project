@@ -31,7 +31,7 @@ export default function PlannerPage() {
 			</Helmet>
 			<FullCalendar
 				plugins={[dayGridPlugin, interactionPlugin]}
-				initialView="dayGridMonth"
+				initialView="dayGridWeek"
 				headerToolbar={{
 					left: 'today',
 					center: 'title',
