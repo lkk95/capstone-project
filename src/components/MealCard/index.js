@@ -1,6 +1,5 @@
 import {useNavigate} from 'react-router-dom';
 
-import useStore from '../../hooks/useStore.js';
 import Button from '../Button/Button.js';
 
 import MealCardContainer from './styled.js';

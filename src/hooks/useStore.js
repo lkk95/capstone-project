@@ -59,6 +59,7 @@ const useStore = create(set => ({
 			color: '#0B4870',
 		},
 	],
+	showModal: false,
 	isEditing: false,
 	addMeal: newMeal => {
 		set(state => {
@@ -93,6 +94,13 @@ const useStore = create(set => ({
 		set(state => {
 			return {
 				isEditing: !state.isEditing,
+			};
+		});
+	},
+	setShowModal: () => {
+		set(state => {
+			return {
+				showModal: !state.showModal,
 			};
 		});
 	},

@@ -8,17 +8,19 @@ import {useState} from 'react';
 import Layout from '../components/Layout/index.js';
 import './fullcalendar.css';
 import MealCard from '../components/MealCard/index.js';
+import Modal from '../components/Modal/index.js';
 import useStore from '../hooks/useStore.js';
 
 export default function PlannerPage() {
 	const allMeals = useStore(state => state.allMeals);
+	const showModal = useStore(state => state.showModal);
+	const setShowModal = useStore(state => state.setShowModal);
 	const [currentMeal, setCurrentMeal] = useState('');
-	const [showMeal, setShowMeal] = useState(false);
 
 	const handleEventClick = clickInfo => {
 		const selectedMeal = allMeals.find(meal => meal.id === clickInfo.event.id);
 		setCurrentMeal(selectedMeal);
-		setShowMeal(true);
+		setShowModal();
 	};
 
 	return (
@@ -49,7 +51,11 @@ export default function PlannerPage() {
 				eventOrder={'category'}
 				eventClick={handleEventClick}
 			/>
-			{showMeal ? <MealCard currentMeal={currentMeal} /> : null}
+			{showModal ? (
+				<Modal handleClose={setShowModal}>
+					<MealCard currentMeal={currentMeal} />
+				</Modal>
+			) : null}
 		</Layout>
 	);
 }
