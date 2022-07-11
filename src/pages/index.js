@@ -2,8 +2,6 @@ import {Helmet} from 'react-helmet';
 
 import CreateForm from '../components/CreateForm/index.js';
 import Layout from '../components/Layout/index.js';
-import MealCard from '../components/MealCard/index.js';
-import useStore from '../hooks/useStore.js';
 
 export default function HomePage() {
 	//const allMeals = useStore(state => state.allMeals);
@@ -17,7 +15,6 @@ export default function HomePage() {
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
 			<CreateForm />
-			<section></section>
 		</Layout>
 	);
 }

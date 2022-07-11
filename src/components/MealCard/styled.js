@@ -1,15 +1,14 @@
 import styled from 'styled-components';
 
 const MealCardContainer = styled.article`
-	position: fixed;
-	width: 80%;
-	height: 15em;
-	top: 25%;
-	left: 10%;
 	display: flex;
+	position: fixed;
+	left: 10%;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	width: 80%;
+	height: 15em;
 	margin: 1em auto;
 	border: solid 0.1em ${props => props.color};
 	border-radius: 1em;
