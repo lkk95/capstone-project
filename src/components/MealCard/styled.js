@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const MealCardContainer = styled.article`
 	display: flex;
 	position: fixed;
+	top: 25%;
 	left: 10%;
 	flex-direction: column;
 	align-items: center;
