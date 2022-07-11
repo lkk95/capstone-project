@@ -11,13 +11,13 @@ const MealCardContainer = styled.article`
 	align-items: center;
 	justify-content: center;
 	margin: 1em auto;
-	border: solid 0.1em #eaeded;
+	border: solid 0.1em ${props => props.color};
 	border-radius: 1em;
-	background-color: #f2eae3;
+	background-color: ${props => props.color};
 
 	h2 {
 		margin: 0 0 1em 0;
-		color: #d4ac0d;
+		color: #fefae0;
 	}
 `;
 
