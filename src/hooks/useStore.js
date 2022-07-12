@@ -12,7 +12,7 @@ const useStore = create(set => ({
 			servings: 4,
 			time: 60,
 			start: '2022-07-05',
-			color: '#0B4870',
+			color: '#FFD18F',
 		},
 		{
 			id: nanoid(),
@@ -23,7 +23,7 @@ const useStore = create(set => ({
 			servings: 4,
 			time: 60,
 			start: '2022-07-06',
-			color: '#DDA15E',
+			color: '#99A146',
 		},
 		{
 			id: nanoid(),
@@ -34,7 +34,7 @@ const useStore = create(set => ({
 			servings: 4,
 			time: 60,
 			start: '2022-07-06',
-			color: '#606C38',
+			color: '#EE8D4A',
 		},
 		{
 			id: nanoid(),
@@ -45,7 +45,7 @@ const useStore = create(set => ({
 			servings: 4,
 			time: 60,
 			start: '2022-07-08',
-			color: '#606C38',
+			color: '#99A146',
 		},
 		{
 			id: nanoid(),
@@ -56,7 +56,7 @@ const useStore = create(set => ({
 			servings: 4,
 			time: 60,
 			start: '2022-07-08',
-			color: '#0B4870',
+			color: '#EE8D4A',
 		},
 		{
 			id: nanoid(),
@@ -67,19 +67,18 @@ const useStore = create(set => ({
 			servings: 4,
 			time: 60,
 			start: '2022-07-12',
-			color: '#606C38',
+			color: '#FFD18F',
 		},
 	],
 	showModal: false,
 	isEditing: false,
-	addMeal: (newMeal, color) => {
+	addMeal: newMeal => {
 		set(state => {
 			return {
 				allMeals: [
 					...state.allMeals,
 					{
 						...newMeal,
-						color: color,
 						id: nanoid(),
 					},
 				],
