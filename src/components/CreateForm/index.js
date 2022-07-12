@@ -9,17 +9,31 @@ import TextInput from './textinput.js';
 
 export default function CreateForm() {
 	const [newMeal, setNewMeal] = useState({});
+	const [color, setColor] = useState('');
 	const addMeal = useStore(state => state.addMeal);
+
+	function addColor() {
+		if (newMeal.category === 'A - Breakfast') {
+			setColor('#DDA15E');
+		}
+		if (newMeal.category === 'B - Lunch') {
+			setColor('#606C38');
+		} else {
+			setColor('#0B4870');
+		}
+	}
 
 	const handleSubmit = event => {
 		event.preventDefault();
-		addMeal(newMeal);
+		addColor();
+		addMeal(newMeal, color);
 		setNewMeal({
 			title: '',
 			ingredients: '',
 			preparation: '',
 			servings: '',
 			time: '',
+			start: '',
 		});
 	};
 

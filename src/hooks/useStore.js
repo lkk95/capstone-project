@@ -58,16 +58,28 @@ const useStore = create(set => ({
 			start: '2022-07-08',
 			color: '#0B4870',
 		},
+		{
+			id: nanoid(),
+			title: 'Enchiladas',
+			category: 'B- Lunch',
+			ingredients: 'ingredient1, ingredient2, ingredient3',
+			preparation: 'Cut ingredients and cook, fry and mix them.',
+			servings: 4,
+			time: 60,
+			start: '2022-07-12',
+			color: '#606C38',
+		},
 	],
 	showModal: false,
 	isEditing: false,
-	addMeal: newMeal => {
+	addMeal: (newMeal, color) => {
 		set(state => {
 			return {
 				allMeals: [
 					...state.allMeals,
 					{
 						...newMeal,
+						color: color,
 						id: nanoid(),
 					},
 				],

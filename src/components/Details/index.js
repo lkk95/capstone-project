@@ -17,7 +17,7 @@ export default function Details() {
 	return (
 		<StyledDetails>
 			<h1>{meal.title}</h1>
-			<Button buttonMode={'goback'} functionToClick={navigate} parameterToClick={'/'}>
+			<Button closeModal functionToClick={navigate} parameterToClick={'/'}>
 				Go Back
 			</Button>
 			<div>
@@ -27,6 +27,7 @@ export default function Details() {
 				<Button
 					functionToClick={deleteMeal}
 					parameterToClick={idFromUrl}
+					closeModal
 					buttonMode={'delete'}
 					isIcon
 				>

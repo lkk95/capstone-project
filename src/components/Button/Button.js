@@ -10,6 +10,7 @@ export default function Button({
 	functionToClick,
 	parameterToClick,
 	buttonMode = 'default',
+	closeModal,
 	isIcon,
 }) {
 	const setShowModal = useStore(state => state.setShowModal);
@@ -22,6 +23,7 @@ export default function Button({
 					onClick={() => {
 						functionToClick(parameterToClick);
 						buttonMode === 'delete' && navigate('/');
+						closeModal && setShowModal();
 					}}
 				>
 					{children}
@@ -30,7 +32,7 @@ export default function Button({
 				<StyledButton
 					onClick={() => {
 						buttonMode !== 'submit' && functionToClick(parameterToClick);
-						buttonMode === 'goback' && setShowModal();
+						closeModal && setShowModal();
 					}}
 				>
 					{children}
