@@ -5,6 +5,7 @@ import {Helmet} from 'react-helmet';
 
 import {useState} from 'react';
 
+import CreateForm from '../components/CreateForm/index.js';
 import Layout from '../components/Layout/index.js';
 import './fullcalendar.css';
 import MealCard from '../components/MealCard/index.js';
@@ -15,11 +16,13 @@ export default function PlannerPage() {
 	const allMeals = useStore(state => state.allMeals);
 	const showModal = useStore(state => state.showModal);
 	const setShowModal = useStore(state => state.setShowModal);
+	const [modalContent, setModalContent] = useState('');
 	const [currentMeal, setCurrentMeal] = useState('');
 
 	const handleEventClick = clickInfo => {
 		const selectedMeal = allMeals.find(meal => meal.id === clickInfo.event.id);
 		setCurrentMeal(selectedMeal);
+		setModalContent('mealcard');
 		setShowModal();
 	};
 
@@ -44,6 +47,10 @@ export default function PlannerPage() {
 				customButtons={{
 					newMeal: {
 						text: 'New',
+						click: function () {
+							setModalContent('form');
+							setShowModal();
+						},
 					},
 				}}
 				editable={true}
@@ -53,7 +60,11 @@ export default function PlannerPage() {
 			/>
 			{showModal ? (
 				<Modal handleClose={setShowModal}>
-					<MealCard currentMeal={currentMeal} />
+					{modalContent === 'mealcard' ? (
+						<MealCard currentMeal={currentMeal} />
+					) : (
+						<CreateForm />
+					)}
 				</Modal>
 			) : null}
 		</Layout>
