@@ -30,10 +30,7 @@ export default function CreateForm() {
 				<h2>Plan your next meal!</h2>
 				<TextInput newMeal={newMeal} setNewMeal={setNewMeal} />
 				<Radio newMeal={newMeal} setNewMeal={setNewMeal} />
-				<Button buttonMode={'submit'} closeModal>
-					Add
-				</Button>
-				<Button closeModal>Cancel</Button>
+				<Button buttonMode={'submit'}>Add</Button>
 			</StyledForm>
 		</>
 	);
