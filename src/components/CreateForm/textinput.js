@@ -50,6 +50,15 @@ export default function TextInput({newMeal, setNewMeal}) {
 				placeholder="min"
 				onChange={event => setNewMeal({...newMeal, time: event.target.value})}
 			/>
+			<label htmlFor="date">Pick a day for your meal:</label>
+			<input
+				type="date"
+				name="date"
+				id="date"
+				value={newMeal.start}
+				onChange={event => setNewMeal({...newMeal, start: event.target.value})}
+				required
+			/>
 		</StyledTextInput>
 	);
 }

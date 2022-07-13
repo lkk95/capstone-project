@@ -20,6 +20,7 @@ export default function CreateForm() {
 			preparation: '',
 			servings: '',
 			time: '',
+			start: '',
 		});
 	};
 
