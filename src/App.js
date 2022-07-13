@@ -3,6 +3,7 @@ import {Routes, Route} from 'react-router-dom';
 import HomePage from './pages';
 import DetailPage from './pages/details.js';
 import PlannerPage from './pages/planner.js';
+import ShoppingList from './pages/shoppinglist.js';
 import {GlobalStyle} from './styles';
 
 export default function App() {
@@ -15,10 +16,11 @@ export default function App() {
 					element={
 						<>
 							<HomePage />
-							<PlannerPage />
 						</>
 					}
 				/>
+				<Route path="/planner" element={<PlannerPage />} />
+				<Route path="/shoppinglist" element={<ShoppingList />} />
 				<Route path="/:idFromUrl" element={<DetailPage />} />
 			</Routes>
 		</>

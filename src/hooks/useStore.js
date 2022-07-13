@@ -59,7 +59,7 @@ const useStore = create(set => ({
 			color: '#0B4870',
 		},
 	],
-	allIngredients: [],
+	allIngredients: ['ingredient1', 'ingredient2', 'ingredient3'],
 	showModal: false,
 	isEditing: false,
 	setAllIngredients: ingredients => {
