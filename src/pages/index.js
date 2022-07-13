@@ -6,9 +6,10 @@ export default function HomePage() {
 	return (
 		<Layout>
 			<Helmet>
-				<title key="title">PlatePlan</title>
+				<title key="title">Home</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
+			<h1>Welcome to your Mealplanner!</h1>
 		</Layout>
 	);
 }

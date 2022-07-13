@@ -1,5 +1,11 @@
+import logo from '../../imgs/logo.svg';
+
 import StyledHeader from './styledheader.js';
 
 export default function Header() {
-	return <StyledHeader></StyledHeader>;
+	return (
+		<StyledHeader>
+			<img src={logo} />
+		</StyledHeader>
+	);
 }
