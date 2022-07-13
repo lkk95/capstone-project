@@ -17,7 +17,7 @@ export default function Details() {
 	return (
 		<StyledDetails>
 			<h1>{meal.title}</h1>
-			<Button closeModal functionToClick={navigate} parameterToClick={'/planner'}>
+			<Button closeModal functionToClick={navigate} parameterToClick="/planner">
 				Go Back
 			</Button>
 			<div>

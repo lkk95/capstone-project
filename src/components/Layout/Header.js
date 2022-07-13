@@ -5,7 +5,7 @@ import StyledHeader from './styledheader.js';
 export default function Header() {
 	return (
 		<StyledHeader>
-			<img src={logo} alt="PlatePlan logo with plate and cutlery" />
+			<img src={logo} alt="PlatePlan" />
 		</StyledHeader>
 	);
 }
