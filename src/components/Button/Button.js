@@ -22,7 +22,7 @@ export default function Button({
 				<StyledIcon
 					onClick={() => {
 						functionToClick(parameterToClick);
-						buttonMode === 'delete' && navigate('/');
+						buttonMode === 'delete' && navigate('/planner');
 						closeModal && setShowModal();
 					}}
 				>

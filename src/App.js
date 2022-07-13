@@ -10,15 +10,8 @@ export default function App() {
 		<>
 			<GlobalStyle />
 			<Routes>
-				<Route
-					path="/"
-					element={
-						<>
-							<HomePage />
-							<PlannerPage />
-						</>
-					}
-				/>
+				<Route path="/" element={<HomePage />} />
+				<Route path="/planner" element={<PlannerPage />} />
 				<Route path="/:idFromUrl" element={<DetailPage />} />
 			</Routes>
 		</>
