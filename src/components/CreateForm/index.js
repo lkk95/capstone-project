@@ -12,13 +12,13 @@ export default function CreateForm() {
 	const setAllIngredients = useStore(state => state.setAllIngredients);
 	const [newMeal, setNewMeal] = useState({});
 	const [ingredients, setIngredients] = useState([]);
-	const [currentIngredient, setCurrentIngredient] = useState('');
+	const [currentIngredient, setCurrentIngredient] = useState([]);
 
 	const handleSubmit = event => {
 		event.preventDefault();
-		setNewMeal({...newMeal, ingredients: ingredients});
 		setAllIngredients(ingredients);
-		addMeal(newMeal);
+		const meal = {...newMeal, ingredients: ingredients};
+		addMeal(meal);
 		setNewMeal({
 			title: '',
 			ingredients: '',
@@ -38,10 +38,10 @@ export default function CreateForm() {
 				<TextInput
 					newMeal={newMeal}
 					setNewMeal={setNewMeal}
-					setIngredients={setIngredients}
-					ingredients={ingredients}
 					currentIngredient={currentIngredient}
 					setCurrentIngredient={setCurrentIngredient}
+					setIngredients={setIngredients}
+					ingredients={ingredients}
 				/>
 				<Radio newMeal={newMeal} setNewMeal={setNewMeal} />
 				<Button buttonMode={'submit'}>Add</Button>

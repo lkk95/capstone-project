@@ -7,10 +7,10 @@ import StyledTextInput from './styledtextinput.js';
 export default function TextInput({
 	newMeal,
 	setNewMeal,
-	ingredients,
-	setIngredients,
 	currentIngredient,
 	setCurrentIngredient,
+	ingredients,
+	setIngredients,
 }) {
 	return (
 		<StyledTextInput>

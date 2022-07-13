@@ -7,7 +7,7 @@ const useStore = create(set => ({
 			id: nanoid(),
 			title: 'Spaghetti Carbonara',
 			category: 'C - Dinner',
-			ingredients: 'ingredient1, ingredient2, ingredient3',
+			ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
 			time: 60,
@@ -18,7 +18,7 @@ const useStore = create(set => ({
 			id: nanoid(),
 			title: 'Blueberry Pancakes',
 			category: 'A - Breakfast',
-			ingredients: 'ingredient1, ingredient2, ingredient3',
+			ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
 			time: 60,
@@ -29,7 +29,7 @@ const useStore = create(set => ({
 			id: nanoid(),
 			title: 'Greek Salad',
 			category: 'B - Lunch',
-			ingredients: 'ingredient1, ingredient2, ingredient3',
+			ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
 			time: 60,
@@ -40,7 +40,7 @@ const useStore = create(set => ({
 			id: nanoid(),
 			title: 'Pea Soup',
 			category: 'B - Lunch',
-			ingredients: 'ingredient1, ingredient2, ingredient3',
+			ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
 			time: 60,
@@ -51,7 +51,7 @@ const useStore = create(set => ({
 			id: nanoid(),
 			title: 'Enchiladas',
 			category: 'C - Dinner',
-			ingredients: 'ingredient1, ingredient2, ingredient3',
+			ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
 			time: 60,
@@ -62,7 +62,7 @@ const useStore = create(set => ({
 			id: nanoid(),
 			title: 'French Toast',
 			category: 'A - Breakfast',
-			ingredients: 'ingredient1, ingredient2, ingredient3',
+			ingredients: ['ingredient1', 'ingredient2', 'ingredient3'],
 			preparation: 'Cut ingredients and cook, fry and mix them.',
 			servings: 4,
 			time: 60,
@@ -80,13 +80,13 @@ const useStore = create(set => ({
 			};
 		});
 	},
-	addMeal: newMeal => {
+	addMeal: meal => {
 		set(state => {
 			return {
 				allMeals: [
 					...state.allMeals,
 					{
-						...newMeal,
+						...meal,
 						id: nanoid(),
 					},
 				],
