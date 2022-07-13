@@ -70,8 +70,16 @@ const useStore = create(set => ({
 			color: '#FFD18F',
 		},
 	],
+	allIngredients: ['ingredient1', 'ingredient2', 'ingredient3'],
 	showModal: false,
 	isEditing: false,
+	setAllIngredients: ingredients => {
+		set(state => {
+			return {
+				allIngredients: [...state.allIngredients, ingredients],
+			};
+		});
+	},
 	addMeal: newMeal => {
 		set(state => {
 			return {

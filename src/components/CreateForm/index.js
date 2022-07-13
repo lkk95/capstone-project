@@ -8,11 +8,16 @@ import StyledForm from './styledform.js';
 import TextInput from './textinput.js';
 
 export default function CreateForm() {
-	const [newMeal, setNewMeal] = useState({});
 	const addMeal = useStore(state => state.addMeal);
+	const setAllIngredients = useStore(state => state.setAllIngredients);
+	const [newMeal, setNewMeal] = useState({});
+	const [ingredients, setIngredients] = useState([]);
+	const [currentIngredient, setCurrentIngredient] = useState('');
 
 	const handleSubmit = event => {
 		event.preventDefault();
+		setNewMeal({...newMeal, ingredients: ingredients});
+		setAllIngredients(ingredients);
 		addMeal(newMeal);
 		setNewMeal({
 			title: '',
@@ -22,13 +27,22 @@ export default function CreateForm() {
 			time: '',
 			start: '',
 		});
+		setIngredients([]);
+		setCurrentIngredient('');
 	};
 
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit}>
 				<h2>Plan your next meal!</h2>
-				<TextInput newMeal={newMeal} setNewMeal={setNewMeal} />
+				<TextInput
+					newMeal={newMeal}
+					setNewMeal={setNewMeal}
+					setIngredients={setIngredients}
+					ingredients={ingredients}
+					currentIngredient={currentIngredient}
+					setCurrentIngredient={setCurrentIngredient}
+				/>
 				<Radio newMeal={newMeal} setNewMeal={setNewMeal} />
 				<Button buttonMode={'submit'}>Add</Button>
 			</StyledForm>

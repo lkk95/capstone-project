@@ -1,14 +1,17 @@
-import {useState} from 'react';
-
 import Button from '../Button/Button.js';
 
 import StyledInput from './styledinput.js';
 import StyledList from './styledlist.js';
 import StyledTextInput from './styledtextinput.js';
 
-export default function TextInput({newMeal, setNewMeal, ingredients, setIngredients}) {
-	const [currentIngredient, setCurrentIngredient] = useState('');
-
+export default function TextInput({
+	newMeal,
+	setNewMeal,
+	ingredients,
+	setIngredients,
+	currentIngredient,
+	setCurrentIngredient,
+}) {
 	return (
 		<StyledTextInput>
 			<label htmlFor="title">Recipe Title:</label>
@@ -34,6 +37,7 @@ export default function TextInput({newMeal, setNewMeal, ingredients, setIngredie
 				/>
 				<Button
 					isIcon
+					modalIcon
 					functionToClick={setIngredients}
 					parameterToClick={[...ingredients, currentIngredient]}
 				>
