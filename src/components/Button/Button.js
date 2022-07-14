@@ -2,8 +2,8 @@ import {useNavigate} from 'react-router-dom';
 
 import useStore from '../../hooks/useStore.js';
 
+import IconButton from './iconbutton';
 import StyledButton from './styledbutton.js';
-import StyledIcon from './styledicon';
 
 export default function Button({
 	children,
@@ -12,6 +12,7 @@ export default function Button({
 	buttonMode = 'default',
 	closeModal,
 	isIcon,
+	modalIcon,
 }) {
 	const setShowModal = useStore(state => state.setShowModal);
 	const navigate = useNavigate();
@@ -19,7 +20,8 @@ export default function Button({
 	return (
 		<>
 			{isIcon ? (
-				<StyledIcon
+				<IconButton
+					modalIcon={modalIcon}
 					onClick={() => {
 						functionToClick(parameterToClick);
 						buttonMode === 'delete' && navigate('/planner');
@@ -27,7 +29,7 @@ export default function Button({
 					}}
 				>
 					{children}
-				</StyledIcon>
+				</IconButton>
 			) : (
 				<StyledButton
 					onClick={() => {

@@ -1,6 +1,17 @@
+import Button from '../Button/Button.js';
+
+import StyledInput from './styledinput.js';
+import StyledList from './styledlist.js';
 import StyledTextInput from './styledtextinput.js';
 
-export default function TextInput({newMeal, setNewMeal}) {
+export default function TextInput({
+	newMeal,
+	setNewMeal,
+	currentIngredient,
+	onCurrentIngredientChange,
+	ingredients,
+	onIngredientsChange,
+}) {
 	return (
 		<StyledTextInput>
 			<label htmlFor="title">Recipe Title:</label>
@@ -14,14 +25,24 @@ export default function TextInput({newMeal, setNewMeal}) {
 				required
 			/>
 			<label htmlFor="ingredients">Ingredients:</label>
-			<textarea
-				name="ingredients"
-				id="ingredients"
-				value={newMeal.ingredients}
-				placeholder="1 cucumber, 2 carrots,..."
-				onChange={event => setNewMeal({...newMeal, ingredients: event.target.value})}
-				required
-			/>
+			<StyledInput>
+				<input
+					type="text"
+					name="ingredients"
+					id="ingredients"
+					value={currentIngredient}
+					placeholder="1 cucumber"
+					onChange={onCurrentIngredientChange}
+					required
+				/>
+				<Button functionToClick={onIngredientsChange}>Add</Button>
+			</StyledInput>
+
+			<StyledList>
+				{ingredients.map((ingredient, index) => {
+					return <li key={index}>{ingredient}</li>;
+				})}
+			</StyledList>
 			<label htmlFor="preparation">Preparation:</label>
 			<textarea
 				name="preparation"

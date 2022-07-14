@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledIcon = styled.button`
+const IconButton = styled.button`
 	border: 0;
 	background-color: #f2eae3;
 	color: #882d17;
@@ -8,4 +8,4 @@ const StyledIcon = styled.button`
 	cursor: pointer;
 `;
 
-export default StyledIcon;
+export default IconButton;
