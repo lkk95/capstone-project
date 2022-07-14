@@ -10,6 +10,7 @@ import TextInput from './textinput.js';
 export default function CreateForm() {
 	const addMeal = useStore(state => state.addMeal);
 	const setAllIngredients = useStore(state => state.setAllIngredients);
+	const setShowModal = useStore(state => state.setShowModal);
 	const [newMeal, setNewMeal] = useState({});
 	const [ingredients, setIngredients] = useState([]);
 	const [currentIngredient, setCurrentIngredient] = useState([]);
@@ -29,6 +30,7 @@ export default function CreateForm() {
 		});
 		setIngredients([]);
 		setCurrentIngredient('');
+		setShowModal();
 	};
 
 	return (

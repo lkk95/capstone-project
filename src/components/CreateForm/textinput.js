@@ -35,10 +35,9 @@ export default function TextInput({
 					onChange={onCurrentIngredientChange}
 					required
 				/>
-				<Button isIcon modalIcon functionToClick={onIngredientsChange}>
-					<i className="fa-solid fa-circle-plus"></i>
-				</Button>
+				<Button functionToClick={onIngredientsChange}>Add</Button>
 			</StyledInput>
+
 			<StyledList>
 				{ingredients.map((ingredient, index) => {
 					return <li key={index}>{ingredient}</li>;

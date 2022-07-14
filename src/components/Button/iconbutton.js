@@ -1,13 +1,12 @@
 import styled, {css} from 'styled-components';
-
+//${props =>
+//	props.modalIcon &&
+//	css`
+//		position: absolute;
+//		top: 13em;
+//		left: 16em;
+//	`}
 const IconButton = styled.button`
-	${props =>
-		props.modalIcon &&
-		css`
-			position: absolute;
-			top: 13em;
-			left: 16em;
-		`}
 	border: 0;
 	background-color: #f2eae3;
 	color: #882d17;
