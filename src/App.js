@@ -13,7 +13,7 @@ export default function App() {
 			<Routes>
 				<Route path="/" element={<HomePage />} />
 				<Route path="/planner" element={<PlannerPage />} />
-				<Route path="/:idFromUrl" element={<ShoppingList />} />
+				<Route path="/shoppinglist" element={<ShoppingList />} />
 				<Route path="/:idFromUrl" element={<DetailPage />} />
 			</Routes>
 		</>

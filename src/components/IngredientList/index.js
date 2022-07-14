@@ -1,14 +1,28 @@
+import {useState} from 'react';
+
 import useStore from '../../hooks/useStore.js';
 
 export default function IngredientList() {
 	const allIngredients = useStore(state => state.allIngredients);
-
-	const ingredientsList = allIngredients.flat();
+	const checkIngredient = useStore(state => state.checkIngredient);
 
 	return (
 		<ul>
-			{ingredientsList.map((ingredient, index) => {
-				return <li key={index}>{ingredient}</li>;
+			{allIngredients.map(ingredient => {
+				return (
+					<li key={ingredient.id}>
+						<input
+							type="checkbox"
+							checked={ingredient.isChecked}
+							onChange={() => {
+								checkIngredient(ingredient.id);
+							}}
+						/>{' '}
+						<span style={{textDecoration: ingredient.isChecked && 'line-through'}}>
+							{ingredient.name}{' '}
+						</span>
+					</li>
+				);
 			})}
 		</ul>
 	);
