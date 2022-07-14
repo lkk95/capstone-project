@@ -3,8 +3,6 @@ import {Helmet} from 'react-helmet';
 import IngredientList from '../components/Ingredientlist/index.js';
 import Layout from '../components/Layout/index.js';
 
-import StyledHeading from './styledheading.js';
-
 export default function ShoppingList() {
 	return (
 		<Layout>
@@ -12,7 +10,7 @@ export default function ShoppingList() {
 				<title key="title">Shopping List</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
-			<StyledHeading>Shopping List</StyledHeading>
+			<h1>Shopping List</h1>
 			<IngredientList />
 		</Layout>
 	);
