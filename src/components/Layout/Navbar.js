@@ -10,6 +10,9 @@ export default function Navbar() {
 			<StyledNavLink role="link" aria-label="Planner" to="/planner">
 				<i className="fa-solid fa-calendar-days"></i>
 			</StyledNavLink>
+			<StyledNavLink role="link" aria-label="Shopping List" to="/shoppinglist">
+				<i className="fa-solid fa-list-check"></i>
+			</StyledNavLink>
 		</StyledNav>
 	);
 }
