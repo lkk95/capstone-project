@@ -13,7 +13,6 @@ export default function Details() {
 	const {idFromUrl} = useParams();
 
 	const meal = allMeals.find(meal => meal.id === idFromUrl);
-	console.log(meal);
 
 	return (
 		<StyledDetails>

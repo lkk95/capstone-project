@@ -39,8 +39,8 @@ export default function CreateForm() {
 					newMeal={newMeal}
 					setNewMeal={setNewMeal}
 					currentIngredient={currentIngredient}
-					setCurrentIngredient={setCurrentIngredient}
-					setIngredients={setIngredients}
+					onCurrentIngredientChange={event => setCurrentIngredient(event.target.value)}
+					onIngredientsChange={() => setIngredients([...ingredients, currentIngredient])}
 					ingredients={ingredients}
 				/>
 				<Radio newMeal={newMeal} setNewMeal={setNewMeal} />

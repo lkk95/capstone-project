@@ -8,9 +8,9 @@ export default function TextInput({
 	newMeal,
 	setNewMeal,
 	currentIngredient,
-	setCurrentIngredient,
+	onCurrentIngredientChange,
 	ingredients,
-	setIngredients,
+	onIngredientsChange,
 }) {
 	return (
 		<StyledTextInput>
@@ -32,15 +32,10 @@ export default function TextInput({
 					id="ingredients"
 					value={currentIngredient}
 					placeholder="1 cucumber"
-					onChange={event => setCurrentIngredient(event.target.value)}
+					onChange={onCurrentIngredientChange}
 					required
 				/>
-				<Button
-					isIcon
-					modalIcon
-					functionToClick={setIngredients}
-					parameterToClick={[...ingredients, currentIngredient]}
-				>
+				<Button isIcon modalIcon functionToClick={onIngredientsChange}>
 					<i className="fa-solid fa-circle-plus"></i>
 				</Button>
 			</StyledInput>
