@@ -45,6 +45,7 @@ export default function CreateForm() {
 					onCurrentIngredientChange={event => setCurrentIngredient(event.target.value)}
 					onIngredientsChange={() => setIngredients([...ingredients, currentIngredient])}
 					ingredients={ingredients}
+					resetHandler={() => setCurrentIngredient('')}
 				/>
 				<Radio newMeal={newMeal} setNewMeal={setNewMeal} />
 				<Button buttonMode={'submit'}>Add</Button>

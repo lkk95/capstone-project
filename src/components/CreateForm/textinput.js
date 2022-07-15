@@ -11,6 +11,7 @@ export default function TextInput({
 	onCurrentIngredientChange,
 	ingredients,
 	onIngredientsChange,
+	resetHandler,
 }) {
 	return (
 		<StyledTextInput>
@@ -34,7 +35,9 @@ export default function TextInput({
 					placeholder="1 cucumber"
 					onChange={onCurrentIngredientChange}
 				/>
-				<Button functionToClick={onIngredientsChange}>Add</Button>
+				<Button resetHandler={resetHandler} functionToClick={onIngredientsChange}>
+					Add
+				</Button>
 			</StyledInput>
 			<StyledList>
 				{ingredients.map((ingredient, index) => {

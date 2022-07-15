@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 const StyledList = styled.ul`
 	padding: 0;
-	list-style: none;
+	text-align: left;
+	margin: 1em auto;
 `;
 
 export default StyledList;
