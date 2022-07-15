@@ -33,11 +33,9 @@ export default function TextInput({
 					value={currentIngredient}
 					placeholder="1 cucumber"
 					onChange={onCurrentIngredientChange}
-					required
 				/>
 				<Button functionToClick={onIngredientsChange}>Add</Button>
 			</StyledInput>
-
 			<StyledList>
 				{ingredients.map((ingredient, index) => {
 					return <li key={index}>{ingredient}</li>;

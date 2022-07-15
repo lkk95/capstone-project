@@ -30,16 +30,7 @@ export default function CreateForm() {
 		flatAllIngredients();
 		const meal = {...newMeal, ingredients: ingredients};
 		addMeal(meal);
-		setNewMeal({
-			title: '',
-			ingredients: '',
-			preparation: '',
-			servings: '',
-			time: '',
-			start: '',
-		});
 		setIngredients([]);
-		setCurrentIngredient('');
 		setShowModal();
 	};
 

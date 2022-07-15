@@ -1,13 +1,13 @@
-import {useState} from 'react';
-
 import useStore from '../../hooks/useStore.js';
+
+import StyledList from './styled.js';
 
 export default function IngredientList() {
 	const allIngredients = useStore(state => state.allIngredients);
 	const checkIngredient = useStore(state => state.checkIngredient);
 
 	return (
-		<ul>
+		<StyledList>
 			{allIngredients.map(ingredient => {
 				return (
 					<li key={ingredient.id}>
@@ -17,13 +17,13 @@ export default function IngredientList() {
 							onChange={() => {
 								checkIngredient(ingredient.id);
 							}}
-						/>{' '}
+						/>
 						<span style={{textDecoration: ingredient.isChecked && 'line-through'}}>
-							{ingredient.name}{' '}
+							{ingredient.name.trim()}
 						</span>
 					</li>
 				);
 			})}
-		</ul>
+		</StyledList>
 	);
 }

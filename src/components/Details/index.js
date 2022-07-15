@@ -13,6 +13,7 @@ export default function Details() {
 	const {idFromUrl} = useParams();
 
 	const meal = allMeals.find(meal => meal.id === idFromUrl);
+	console.log(meal);
 
 	return (
 		<StyledDetails>
@@ -38,6 +39,7 @@ export default function Details() {
 				<h2>Ingredients</h2>
 				<ul>
 					{meal.ingredients.map((ingredient, index) => {
+						console.log(ingredient);
 						return <li key={index}>{ingredient}</li>;
 					})}
 				</ul>

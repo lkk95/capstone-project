@@ -14,7 +14,6 @@ const StyledTextInput = styled.fieldset`
 		padding: 1em;
 		border: 0;
 		border-radius: 0.4em;
-		text-align: center;
 	}
 	input[type='number'] {
 		width: 30%;
