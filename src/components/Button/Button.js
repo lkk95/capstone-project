@@ -13,6 +13,7 @@ export default function Button({
 	closeModal,
 	isIcon,
 	modalIcon,
+	resetHandler,
 }) {
 	const setShowModal = useStore(state => state.setShowModal);
 	const navigate = useNavigate();
@@ -35,6 +36,7 @@ export default function Button({
 					onClick={() => {
 						buttonMode !== 'submit' && functionToClick(parameterToClick);
 						closeModal && setShowModal();
+						resetHandler();
 					}}
 				>
 					{children}

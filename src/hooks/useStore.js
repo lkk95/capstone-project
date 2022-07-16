@@ -70,13 +70,35 @@ const useStore = create(set => ({
 			color: '#FFD18F',
 		},
 	],
-	allIngredients: ['ingredient1', 'ingredient2', 'ingredient3'],
+	allIngredients: [
+		{id: nanoid(), name: 'ingredient1', isChecked: false},
+		{id: nanoid(), name: 'ingredient2', isChecked: false},
+		{id: nanoid(), name: 'ingredient3', isChecked: false},
+	],
 	showModal: false,
 	isEditing: false,
 	setAllIngredients: ingredients => {
 		set(state => {
 			return {
 				allIngredients: [...state.allIngredients, ingredients],
+			};
+		});
+	},
+	flatAllIngredients: () => {
+		set(state => {
+			return {
+				allIngredients: state.allIngredients.flat(),
+			};
+		});
+	},
+	checkIngredient: id => {
+		set(state => {
+			return {
+				allIngredients: state.allIngredients.map(ingredient =>
+					ingredient.id === id
+						? {...ingredient, isChecked: !ingredient.isChecked}
+						: ingredient
+				),
 			};
 		});
 	},
