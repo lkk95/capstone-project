@@ -1,6 +1,5 @@
 import {Helmet} from 'react-helmet';
 
-import Header from '../components/Layout/Header.js';
 import Navbar from '../components/Layout/Navbar.js';
 import WelcomeContainer from '../components/WelcomeContainer/index.js';
 
