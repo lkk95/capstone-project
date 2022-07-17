@@ -21,7 +21,6 @@ export default function TextInput({
 				name="title"
 				id="title"
 				value={newMeal.title}
-				placeholder="Summer Salad"
 				onChange={event => setNewMeal({...newMeal, title: event.target.value})}
 				required
 			/>
@@ -32,7 +31,6 @@ export default function TextInput({
 					name="ingredients"
 					id="ingredients"
 					value={currentIngredient}
-					placeholder="1 cucumber"
 					onChange={onCurrentIngredientChange}
 				/>
 				<Button resetHandler={resetHandler} functionToClick={onIngredientsChange}>
@@ -49,7 +47,6 @@ export default function TextInput({
 				name="preparation"
 				id="preparation"
 				value={newMeal.preparation}
-				placeholder="Cut vegetables. Then..."
 				onChange={event => setNewMeal({...newMeal, preparation: event.target.value})}
 				required
 			/>
@@ -59,7 +56,6 @@ export default function TextInput({
 				name="servings"
 				id="servings"
 				value={newMeal.servings}
-				placeholder="1"
 				onChange={event => setNewMeal({...newMeal, servings: event.target.value})}
 				required
 			/>
@@ -72,7 +68,7 @@ export default function TextInput({
 				placeholder="min"
 				onChange={event => setNewMeal({...newMeal, time: event.target.value})}
 			/>
-			<label htmlFor="date">Pick a day for your meal:</label>
+			<label htmlFor="date">Date:</label>
 			<input
 				type="date"
 				name="date"

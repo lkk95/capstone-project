@@ -2,9 +2,10 @@ import {useParams, useNavigate} from 'react-router-dom';
 
 import useStore from '../../hooks/useStore.js';
 import Button from '../Button/Button.js';
-import StyledList from '../CreateForm/styledlist.js';
 
 import StyledDetails from './styled.js';
+import StyledImage from './styledimage.js';
+import StyledList from './styledlist.js';
 
 export default function Details() {
 	const allMeals = useStore(state => state.allMeals);
@@ -17,7 +18,7 @@ export default function Details() {
 	console.log(meal);
 
 	return (
-		<StyledDetails>
+		<StyledDetails color={meal.color}>
 			<h1>{meal.title}</h1>
 			<Button closeModal functionToClick={navigate} parameterToClick="/planner">
 				Go Back
@@ -36,6 +37,7 @@ export default function Details() {
 					<i className="fa-solid fa-trash"></i>
 				</Button>
 			</div>
+			<StyledImage src={meal.image} />
 			<section>
 				<h2>Ingredients</h2>
 				<StyledList>

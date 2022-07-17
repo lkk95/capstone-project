@@ -1,7 +1,9 @@
 import {Helmet} from 'react-helmet';
 
-import Navbar from '../components/Layout/Navbar.js';
-import WelcomeContainer from '../components/WelcomeContainer/index.js';
+import HomeGraphic from '../components/HomeContainer/graphic.js';
+import StartContainer from '../components/HomeContainer/start.js';
+import StyledHomeContainer from '../components/HomeContainer/styledhomecontainer.js';
+import WelcomeContainer from '../components/HomeContainer/welcome.js';
 
 export default function HomePage() {
 	return (
@@ -10,8 +12,11 @@ export default function HomePage() {
 				<title key="title">Home</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
-			<WelcomeContainer />
-			<Navbar />
+			<StyledHomeContainer>
+				<WelcomeContainer />
+				<StartContainer />
+				<HomeGraphic />
+			</StyledHomeContainer>
 		</>
 	);
 }

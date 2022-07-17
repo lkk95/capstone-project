@@ -3,7 +3,7 @@ import StyledImageUpload from './styledimageupload.js';
 export default function ImageUpload({newMeal, setNewMeal}) {
 	return (
 		<StyledImageUpload>
-			<label htmlFor="image">Upload an image (only png or jpeg):</label>
+			<label htmlFor="image">Image (only png or jpeg):</label>
 			<input
 				type="file"
 				name="image"

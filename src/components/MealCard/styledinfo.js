@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-const StyledContainer = styled.section`
+const StyledInfo = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	gap: 1em;
 `;
 
-export default StyledContainer;
+export default StyledInfo;

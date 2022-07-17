@@ -2,10 +2,13 @@ import styled from 'styled-components';
 
 const IconButton = styled.button`
 	border: 0;
-	background-color: #f2eae3;
-	color: #882d17;
-	font-size: 1.3rem;
+	background-color: white;
+	color: #e37f44;
+	font-size: ${props => (props.iconStyle === 'homeicon' ? '2.5rem' : '1.3rem')};
 	cursor: pointer;
+	&:hover {
+		font-size: ${props => (props.iconStyle === 'homeicon' ? '3.5rem' : '2.3rem')};
+	}
 `;
 
 export default IconButton;

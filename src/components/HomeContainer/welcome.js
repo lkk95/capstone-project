@@ -1,10 +1,12 @@
 import logo from '../../imgs/logo.svg';
-import StyledContainer from '../WelcomeContainer/styled.js';
+
+import StyledHeading from './styledheading.js';
+import StyledContainer from './styledwelcome.js';
 
 export default function WelcomeContainer() {
 	return (
 		<StyledContainer>
-			<h1>Welcome to</h1>
+			<StyledHeading>Welcome to</StyledHeading>
 			<img src={logo} alt="PlatePlan" />
 		</StyledContainer>
 	);

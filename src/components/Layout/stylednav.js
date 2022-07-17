@@ -10,6 +10,7 @@ const StyledNav = styled.div`
 	height: 4em;
 	background-color: #f5c0a2;
 	color: white;
+	z-index: 1;
 `;
 
 export default StyledNav;

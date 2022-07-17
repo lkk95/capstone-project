@@ -10,14 +10,16 @@ const StyledForm = styled.form`
 	padding: 2em;
 	border: #d4efdf solid 0;
 	border-radius: 0.4em;
-	background-color: #d4efdf;
+	background-color: #e0e0e0;
+	font-weight: 300;
 
 	h2 {
 		font-size: 1.2rem;
 	}
 
 	label {
-		margin-right: 1em;
+		margin: 1em 0;
+		text-align: center;
 	}
 `;
 
