@@ -141,7 +141,17 @@ const useStore = create(set => ({
 			image: 'https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=749&q=80',
 		},
 	],
-	allIngredients: [],
+	allIngredients: [
+		{id: nanoid(), name: '1 egg', isChecked: false},
+		{id: nanoid(), name: '1 sachet vanilla sugar', isChecked: false},
+		{id: nanoid(), name: '200 g flour', isChecked: false},
+		{id: nanoid(), name: '1 tbsp baking soda', isChecked: false},
+		{id: nanoid(), name: '1 pinch of salt', isChecked: false},
+		{id: nanoid(), name: 'milk', isChecked: false},
+		{id: nanoid(), name: 'butter for frying', isChecked: false},
+		{id: nanoid(), name: 'handful of blueberries', isChecked: false},
+		{id: nanoid(), name: 'maple syrup', isChecked: false},
+	],
 	showModal: false,
 	isEditing: false,
 	setAllIngredients: ingredients => {

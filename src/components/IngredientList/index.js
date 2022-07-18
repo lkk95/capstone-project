@@ -21,7 +21,7 @@ export default function IngredientList() {
 								}}
 							/>
 							<span style={{textDecoration: ingredient.isChecked && 'line-through'}}>
-								{ingredient.name.trim()}
+								{ingredient.name}
 							</span>
 						</li>
 					);

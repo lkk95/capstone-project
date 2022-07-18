@@ -15,7 +15,7 @@ export default function TextInput({
 }) {
 	return (
 		<StyledTextInput>
-			<label htmlFor="title">Recipe Title:</label>
+			<label htmlFor="title">Recipe Title*</label>
 			<input
 				type="text"
 				name="title"
@@ -24,7 +24,7 @@ export default function TextInput({
 				onChange={event => setNewMeal({...newMeal, title: event.target.value})}
 				required
 			/>
-			<label htmlFor="ingredients">Ingredients:</label>
+			<label htmlFor="ingredients">Ingredients*</label>
 			<StyledInput>
 				<input
 					type="text"
@@ -42,7 +42,7 @@ export default function TextInput({
 					return <li key={index}>{ingredient}</li>;
 				})}
 			</StyledList>
-			<label htmlFor="preparation">Preparation:</label>
+			<label htmlFor="preparation">Preparation*</label>
 			<textarea
 				name="preparation"
 				id="preparation"
@@ -50,16 +50,15 @@ export default function TextInput({
 				onChange={event => setNewMeal({...newMeal, preparation: event.target.value})}
 				required
 			/>
-			<label htmlFor="servings">Servings:</label>
+			<label htmlFor="servings">Servings</label>
 			<input
 				type="number"
 				name="servings"
 				id="servings"
 				value={newMeal.servings}
 				onChange={event => setNewMeal({...newMeal, servings: event.target.value})}
-				required
 			/>
-			<label htmlFor="time">Cooking Time:</label>
+			<label htmlFor="time">Cooking Time</label>
 			<input
 				type="number"
 				name="time"
@@ -68,7 +67,7 @@ export default function TextInput({
 				placeholder="min"
 				onChange={event => setNewMeal({...newMeal, time: event.target.value})}
 			/>
-			<label htmlFor="date">Date:</label>
+			<label htmlFor="date">Date*</label>
 			<input
 				type="date"
 				name="date"
