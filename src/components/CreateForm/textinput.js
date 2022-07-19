@@ -15,24 +15,22 @@ export default function TextInput({
 }) {
 	return (
 		<StyledTextInput>
-			<label htmlFor="title">Recipe Title:</label>
+			<label htmlFor="title">Recipe Title*</label>
 			<input
 				type="text"
 				name="title"
 				id="title"
 				value={newMeal.title}
-				placeholder="Summer Salad"
 				onChange={event => setNewMeal({...newMeal, title: event.target.value})}
 				required
 			/>
-			<label htmlFor="ingredients">Ingredients:</label>
+			<label htmlFor="ingredients">Ingredients*</label>
 			<StyledInput>
 				<input
 					type="text"
 					name="ingredients"
 					id="ingredients"
 					value={currentIngredient}
-					placeholder="1 cucumber"
 					onChange={onCurrentIngredientChange}
 				/>
 				<Button resetHandler={resetHandler} functionToClick={onIngredientsChange}>
@@ -44,26 +42,24 @@ export default function TextInput({
 					return <li key={index}>{ingredient}</li>;
 				})}
 			</StyledList>
-			<label htmlFor="preparation">Preparation:</label>
+			<label htmlFor="preparation">Preparation*</label>
 			<textarea
 				name="preparation"
 				id="preparation"
 				value={newMeal.preparation}
-				placeholder="Cut vegetables. Then..."
 				onChange={event => setNewMeal({...newMeal, preparation: event.target.value})}
 				required
 			/>
-			<label htmlFor="servings">Servings:</label>
+			<label htmlFor="servings">Servings*</label>
 			<input
 				type="number"
 				name="servings"
 				id="servings"
 				value={newMeal.servings}
-				placeholder="1"
 				onChange={event => setNewMeal({...newMeal, servings: event.target.value})}
 				required
 			/>
-			<label htmlFor="time">Cooking Time:</label>
+			<label htmlFor="time">Cooking Time</label>
 			<input
 				type="number"
 				name="time"
@@ -72,7 +68,7 @@ export default function TextInput({
 				placeholder="min"
 				onChange={event => setNewMeal({...newMeal, time: event.target.value})}
 			/>
-			<label htmlFor="date">Pick a day for your meal:</label>
+			<label htmlFor="date">Pick a day for your meal*</label>
 			<input
 				type="date"
 				name="date"

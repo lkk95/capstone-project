@@ -13,6 +13,7 @@ export default function Button({
 	closeModal,
 	isIcon,
 	iconStyle,
+	buttonStyle,
 	resetHandler,
 }) {
 	const setShowModal = useStore(state => state.setShowModal);
@@ -33,6 +34,7 @@ export default function Button({
 				</IconButton>
 			) : (
 				<StyledButton
+					buttonStyle={buttonStyle}
 					onClick={() => {
 						buttonMode !== 'submit' && functionToClick(parameterToClick);
 						closeModal && setShowModal();
