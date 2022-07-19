@@ -192,12 +192,10 @@ const useStore = create(set => ({
 			};
 		});
 	},
-	editMeal: (editedMeal, idFromUrl) => {
+	editMeal: (meal, idFromUrl) => {
 		set(state => {
 			return {
-				allMeals: state.allMeals.map(meal =>
-					meal.id === idFromUrl ? {...editedMeal} : meal
-				),
+				allMeals: state.allMeals.map(_meal => (_meal.id === idFromUrl ? {...meal} : _meal)),
 			};
 		});
 	},

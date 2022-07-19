@@ -1,3 +1,4 @@
+import {nanoid} from 'nanoid';
 import {useState} from 'react';
 import {useParams} from 'react-router-dom';
 
@@ -19,17 +20,39 @@ export default function EditForm() {
 	const meal = allMeals.find(meal => meal.id === idFromUrl);
 
 	const [editedMeal, setEditedMeal] = useState({...meal});
+	const setAllIngredients = useStore(state => state.setAllIngredients);
+	const flatAllIngredients = useStore(state => state.flatAllIngredients);
+	const [ingredients, setIngredients] = useState([...meal.ingredients]);
+	const [currentIngredient, setCurrentIngredient] = useState([]);
+
+	function ingredientsToObject() {
+		const updatedIngredients = ingredients.map(ingredient => {
+			return {id: nanoid(), name: ingredient, isChecked: false};
+		});
+		setAllIngredients(updatedIngredients);
+	}
 
 	const handleSubmit = event => {
 		event.preventDefault();
-		editMeal(editedMeal, idFromUrl);
+		ingredientsToObject();
+		flatAllIngredients();
+		const meal = {...editedMeal, ingredients: ingredients};
+		editMeal(meal, idFromUrl);
 		setEditing(false);
 	};
 
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit}>
-				<TextInput editedMeal={editedMeal} setEditedMeal={setEditedMeal} />
+				<TextInput
+					editedMeal={editedMeal}
+					setEditedMeal={setEditedMeal}
+					currentIngredient={currentIngredient}
+					onCurrentIngredientChange={event => setCurrentIngredient(event.target.value)}
+					onIngredientsChange={() => setIngredients([...ingredients, currentIngredient])}
+					ingredients={ingredients}
+					resetHandler={() => setCurrentIngredient('')}
+				/>
 				<Radio editedMeal={editedMeal} setEditedMeal={setEditedMeal} />
 				<StyledButtons>
 					<Button buttonMode={'submit'}>Save</Button>
