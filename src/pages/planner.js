@@ -10,6 +10,7 @@ import Layout from '../components/Layout/index.js';
 import './fullcalendar.css';
 import MealCard from '../components/MealCard/index.js';
 import Modal from '../components/Modal/index.js';
+import PlannerInfo from '../components/PlannerInfo/index.js';
 import useStore from '../hooks/useStore.js';
 
 export default function PlannerPage() {
@@ -32,6 +33,7 @@ export default function PlannerPage() {
 				<title key="title">Planner</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
+			<PlannerInfo />
 			<FullCalendar
 				plugins={[dayGridPlugin, interactionPlugin]}
 				initialView="dayGridWeek"
