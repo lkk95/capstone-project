@@ -12,7 +12,7 @@ export default function Button({
 	buttonMode = 'default',
 	closeModal,
 	isIcon,
-	modalIcon,
+	iconStyle,
 	resetHandler,
 }) {
 	const setShowModal = useStore(state => state.setShowModal);
@@ -22,7 +22,7 @@ export default function Button({
 		<>
 			{isIcon ? (
 				<IconButton
-					modalIcon={modalIcon}
+					iconStyle={iconStyle}
 					onClick={() => {
 						functionToClick(parameterToClick);
 						buttonMode === 'delete' && navigate('/planner');
