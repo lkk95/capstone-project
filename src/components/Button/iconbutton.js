@@ -8,6 +8,7 @@ const IconButton = styled.button`
 	cursor: pointer;
 	&:hover {
 		font-size: ${props => (props.iconStyle === 'homeicon' ? '3.5rem' : '2.3rem')};
+		transition: ease 1s;
 	}
 `;
 
