@@ -6,13 +6,13 @@ const StyledContainer = styled.section`
 	align-items: center;
 	gap: 1em;
 	height: fit-content;
+	margin-top: 0;
 	font-size: 1em;
 	font-weight: 200;
-	margin-top: 0em;
 
 	@media only screen and (max-width: 600px) {
+		margin-top: 0;
 		margin-bottom: 15em;
-		margin-top: 0%;
 		font-size: 0.8rem;
 	}
 `;
