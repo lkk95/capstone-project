@@ -5,19 +5,17 @@ const MealCardContainer = styled.article`
 	position: fixed;
 	top: 25%;
 	left: 10%;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 80%;
+	width: 80vw;
 	height: 15em;
 	margin: 1em auto;
 	border: solid 0.1em ${props => props.color};
 	border-radius: 1em;
 	background-color: ${props => props.color};
-
-	h2 {
-		margin: 0 0 1em 0;
-		color: #fefae0;
+	@media only screen and (min-width: 992px) {
+		width: 30vw;
+		left: 35%;
 	}
 `;
 
