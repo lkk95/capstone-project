@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const StyledHomeContainer = styled.main`
 	display: grid;
-	justify-content: center;
+	justify-content: space-around;
 	margin: 2em 0 0 0;
+	height: 100vh;
 	position: relative;
-	height: 39.9em;
 `;
 
 export default StyledHomeContainer;
