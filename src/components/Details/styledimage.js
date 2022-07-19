@@ -6,6 +6,7 @@ const StyledImage = styled.img`
 	margin-top: 3em;
 	@media only screen and (min-width: 992px) {
 		width: 30%;
+		height: 30em;
 	}
 `;
 
