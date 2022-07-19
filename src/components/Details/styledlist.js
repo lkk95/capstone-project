@@ -5,8 +5,8 @@ const StyledList = styled.ul`
 	padding: 1em;
 	border: 0 black solid;
 	border-radius: 0.4em;
-	text-align: left;
 	line-height: 150%;
+	text-align: left;
 `;
 
 export default StyledList;

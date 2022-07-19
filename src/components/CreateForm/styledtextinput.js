@@ -9,8 +9,8 @@ const StyledTextInput = styled.fieldset`
 		padding: 2em;
 		border: 0;
 		border-radius: 0.4em;
-		text-align: center;
 		font-family: 'Montserrat', sans-serif;
+		text-align: center;
 	}
 	input[type='text'] {
 		padding: 1em;

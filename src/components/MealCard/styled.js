@@ -14,8 +14,8 @@ const MealCardContainer = styled.article`
 	border-radius: 1em;
 	background-color: ${props => props.color};
 	@media only screen and (min-width: 992px) {
-		width: 30vw;
 		left: 35%;
+		width: 30vw;
 	}
 `;
 
