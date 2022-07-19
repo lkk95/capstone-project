@@ -5,10 +5,7 @@ import StyledButtons from '../EditForm/styledbuttons.js';
 
 import StyledImageUpload from './styledimageupload.js';
 
-export default function ImageUpload({handleClick}) {
-	const [imageUrl, setImageUrl] = useState('');
-	console.log(imageUrl);
-
+export default function ImageUpload({newMeal, setNewMeal}) {
 	return (
 		<StyledImageUpload>
 			<label htmlFor="image">Image</label>
@@ -18,11 +15,10 @@ export default function ImageUpload({handleClick}) {
 					name="image"
 					id="image"
 					accept="image/*"
-					onChange={event => setImageUrl(URL.createObjectURL(event.target.files[0]))}
+					onChange={event =>
+						setNewMeal({...newMeal, image: URL.createObjectURL(event.target.files[0])})
+					}
 				/>
-				<Button functionToClick={handleClick} parameterToClick={imageUrl}>
-					Add
-				</Button>
 			</StyledButtons>
 		</StyledImageUpload>
 	);
