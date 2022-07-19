@@ -47,7 +47,7 @@ export default function CreateForm() {
 					ingredients={ingredients}
 					resetHandler={() => setCurrentIngredient('')}
 				/>
-				<ImageUpload />
+				<ImageUpload handleClick={imageUrl => setNewMeal({...newMeal, image: imageUrl})} />
 				<Radio newMeal={newMeal} setNewMeal={setNewMeal} />
 				<Button buttonMode={'submit'}>Add</Button>
 			</StyledForm>
