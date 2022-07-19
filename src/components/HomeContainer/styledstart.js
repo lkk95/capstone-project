@@ -12,7 +12,6 @@ const StyledContainer = styled.section`
 
 	@media only screen and (max-width: 600px) {
 		margin-top: 0;
-		margin-bottom: 15em;
 		font-size: 0.8rem;
 	}
 `;
