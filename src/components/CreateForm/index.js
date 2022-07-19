@@ -4,6 +4,7 @@ import {useState} from 'react';
 import useStore from '../../hooks/useStore.js';
 import Button from '../Button/Button.js';
 
+import ImageUpload from './imageupload.js';
 import Radio from './radio.js';
 import StyledForm from './styledform.js';
 import TextInput from './textinput.js';
@@ -37,7 +38,6 @@ export default function CreateForm() {
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit}>
-				<h2>Plan your next meal!</h2>
 				<TextInput
 					newMeal={newMeal}
 					setNewMeal={setNewMeal}
@@ -47,6 +47,7 @@ export default function CreateForm() {
 					ingredients={ingredients}
 					resetHandler={() => setCurrentIngredient('')}
 				/>
+				<ImageUpload />
 				<Radio newMeal={newMeal} setNewMeal={setNewMeal} />
 				<Button buttonMode={'submit'}>Add</Button>
 			</StyledForm>

@@ -6,7 +6,7 @@ const StyledList = styled.ul`
 	border: 0 black solid;
 	border-radius: 0.4em;
 	text-align: left;
-	list-style: none;
+	line-height: 150%;
 `;
 
 export default StyledList;

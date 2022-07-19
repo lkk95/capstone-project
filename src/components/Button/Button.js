@@ -12,7 +12,8 @@ export default function Button({
 	buttonMode = 'default',
 	closeModal,
 	isIcon,
-	modalIcon,
+	iconStyle,
+	buttonStyle,
 	resetHandler,
 }) {
 	const setShowModal = useStore(state => state.setShowModal);
@@ -22,7 +23,7 @@ export default function Button({
 		<>
 			{isIcon ? (
 				<IconButton
-					modalIcon={modalIcon}
+					iconStyle={iconStyle}
 					onClick={() => {
 						functionToClick(parameterToClick);
 						buttonMode === 'delete' && navigate('/planner');
@@ -33,6 +34,7 @@ export default function Button({
 				</IconButton>
 			) : (
 				<StyledButton
+					buttonStyle={buttonStyle}
 					onClick={() => {
 						buttonMode !== 'submit' && functionToClick(parameterToClick);
 						closeModal && setShowModal();

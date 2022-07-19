@@ -7,6 +7,8 @@ import Radio from '../EditForm/radio.js';
 import StyledForm from '../EditForm/styledform.js';
 import TextInput from '../EditForm/textinput.js';
 
+import StyledButtons from './styledbuttons.js';
+
 export default function EditForm() {
 	const editMeal = useStore(state => state.editMeal);
 	const allMeals = useStore(state => state.allMeals);
@@ -27,13 +29,14 @@ export default function EditForm() {
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit}>
-				<h2>Edit your meal!</h2>
 				<TextInput editedMeal={editedMeal} setEditedMeal={setEditedMeal} />
 				<Radio editedMeal={editedMeal} setEditedMeal={setEditedMeal} />
-				<Button buttonMode={'submit'}>Save</Button>
-				<Button functionToClick={setEditing} parameterToClick={false}>
-					Cancel
-				</Button>
+				<StyledButtons>
+					<Button buttonMode={'submit'}>Save</Button>
+					<Button functionToClick={setEditing} parameterToClick={false}>
+						Cancel
+					</Button>
+				</StyledButtons>
 			</StyledForm>
 		</>
 	);

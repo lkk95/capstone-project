@@ -1,4 +1,5 @@
 import useStore from '../../hooks/useStore.js';
+import StyledText from '../PlannerInfo/styledtext.js';
 
 import StyledList from './styled.js';
 
@@ -8,22 +9,26 @@ export default function IngredientList() {
 
 	return (
 		<StyledList>
-			{allIngredients.map(ingredient => {
-				return (
-					<li key={ingredient.id}>
-						<input
-							type="checkbox"
-							checked={ingredient.isChecked}
-							onChange={() => {
-								checkIngredient(ingredient.id);
-							}}
-						/>
-						<span style={{textDecoration: ingredient.isChecked && 'line-through'}}>
-							{ingredient.name.trim()}
-						</span>
-					</li>
-				);
-			})}
+			{allIngredients.length > 0 ? (
+				allIngredients.map(ingredient => {
+					return (
+						<li key={ingredient.id}>
+							<input
+								type="checkbox"
+								checked={ingredient.isChecked}
+								onChange={() => {
+									checkIngredient(ingredient.id);
+								}}
+							/>
+							<span style={{textDecoration: ingredient.isChecked && 'line-through'}}>
+								{ingredient.name}
+							</span>
+						</li>
+					);
+				})
+			) : (
+				<StyledText>Your ingredients will be added here.</StyledText>
+			)}
 		</StyledList>
 	);
 }

@@ -5,8 +5,8 @@ const StyledButton = styled.button`
 	height: 2.5em;
 	border: solid 0 black;
 	border-radius: 2em;
-	background-color: #fefae0;
-	color: #000;
+	background-color: ${props => (props.buttonStyle === 'cardbutton' ? '#fefae0' : '#e37f44')};
+	color: ${props => (props.buttonStyle === 'cardbutton' ? '#000' : '#fefae0')};
 	cursor: pointer;
 `;
 

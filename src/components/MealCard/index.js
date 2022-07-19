@@ -3,16 +3,26 @@ import {useNavigate} from 'react-router-dom';
 import Button from '../Button/Button.js';
 
 import MealCardContainer from './styled.js';
+import StyledImage from './styledimage.js';
+import StyledInfo from './styledinfo.js';
+import StyledTitle from './styledtitle.js';
 
 export default function MealCard({currentMeal}) {
 	const navigate = useNavigate();
 
 	return (
 		<MealCardContainer color={currentMeal.color}>
-			<h2>{currentMeal.title}</h2>
-			<Button functionToClick={navigate} parameterToClick={'/' + currentMeal.id}>
-				Details
-			</Button>
+			<StyledImage></StyledImage>
+			<StyledInfo>
+				<StyledTitle>{currentMeal.title}</StyledTitle>
+				<Button
+					buttonStyle={'cardbutton'}
+					functionToClick={navigate}
+					parameterToClick={'/' + currentMeal.id}
+				>
+					Details
+				</Button>
+			</StyledInfo>
 		</MealCardContainer>
 	);
 }

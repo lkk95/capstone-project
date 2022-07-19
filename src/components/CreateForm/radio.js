@@ -8,7 +8,7 @@ export default function Radio({newMeal, setNewMeal}) {
 					setNewMeal({...newMeal, category: event.target.value});
 				}}
 			>
-				<legend>Choose the category of your recipe:</legend>
+				<legend>Time of Day*</legend>
 				<input type="radio" name="category" id="breakfast" value="A - Breakfast" required />
 				<label htmlFor="breakfast">Breakfast</label>
 				<input type="radio" name="category" id="lunch" value="B - Lunch" />
@@ -21,7 +21,7 @@ export default function Radio({newMeal, setNewMeal}) {
 					setNewMeal({...newMeal, color: event.target.value});
 				}}
 			>
-				<legend>Choose the color of your recipe:</legend>
+				<legend>Color*</legend>
 				<input type="radio" name="color" id="yellow" value="#FFD18F" required />
 				<label htmlFor="yellow">Yellow</label>
 				<input type="radio" name="color" id="orange" value="#EE8D4A" />
