@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
 	body {
 		margin: 0;
-		font-family: sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		font-size: 1rem;
 	}
 `;
