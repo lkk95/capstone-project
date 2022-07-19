@@ -12,6 +12,10 @@ const StyledForm = styled.form`
 	background-color: #e0e0e0;
 	font-weight: 300;
 
+	@media only screen and (min-width: 992px) {
+		margin: 4em 30em 2em 30em;
+	}
+
 	h2 {
 		font-size: 1.2rem;
 	}

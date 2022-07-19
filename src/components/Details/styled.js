@@ -24,6 +24,9 @@ const StyledDetails = styled.article`
 		text-align: center;
 		font-weight: 300;
 		line-height: 180%;
+		@media only screen and (min-width: 992px) {
+			margin: 3em 20em 3em 20em;
+		}
 	}
 `;
 
