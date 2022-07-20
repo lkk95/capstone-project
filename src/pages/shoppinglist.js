@@ -11,7 +11,7 @@ export default function ShoppingList() {
 				<title key="title">Shopping List</title>
 				<meta key="description" name="description" content="This is my project" />
 			</Helmet>
-			<StyledHeading>SHOPPING LIST</StyledHeading>
+			<StyledHeading>Shopping List</StyledHeading>
 			<IngredientList />
 		</Layout>
 	);
