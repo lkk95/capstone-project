@@ -37,7 +37,6 @@ export default function CreateForm() {
 	return (
 		<>
 			<StyledForm onSubmit={handleSubmit}>
-				<h2>Plan your next meal!</h2>
 				<TextInput
 					newMeal={newMeal}
 					setNewMeal={setNewMeal}

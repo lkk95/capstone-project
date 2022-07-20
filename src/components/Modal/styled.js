@@ -16,6 +16,7 @@ const StyledModal = styled.div`
 		right: 1em;
 		color: white;
 		font-size: 2em;
+		cursor: pointer;
 	}
 `;
 

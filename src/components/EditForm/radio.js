@@ -6,12 +6,12 @@ export default function Radio({editedMeal, setEditedMeal}) {
 			<StyledRadio
 				onChange={event => setEditedMeal({...editedMeal, category: event.target.value})}
 			>
-				<legend>Choose the category of your recipe:</legend>
-				<input type="radio" name="category" id="breakfast" value="Breakfast" required />
+				<legend>Time of Day*</legend>
+				<input type="radio" name="category" id="breakfast" value="A - Breakfast" required />
 				<label htmlFor="breakfast">Breakfast</label>
-				<input type="radio" name="category" id="lunch" value="Lunch" />
+				<input type="radio" name="category" id="lunch" value="B - Lunch" />
 				<label htmlFor="lunch">Lunch</label>
-				<input type="radio" name="category" id="dinner" value="Dinner" />
+				<input type="radio" name="category" id="dinner" value="C - Dinner" />
 				<label htmlFor="dinner">Dinner</label>
 			</StyledRadio>
 			<StyledRadio
@@ -19,7 +19,7 @@ export default function Radio({editedMeal, setEditedMeal}) {
 					setEditedMeal({...editedMeal, color: event.target.value});
 				}}
 			>
-				<legend>Choose the color of your recipe:</legend>
+				<legend>Color*</legend>
 				<input type="radio" name="color" id="yellow" value="#FFD18F" required />
 				<label htmlFor="yellow">Yellow</label>
 				<input type="radio" name="color" id="orange" value="#EE8D4A" />

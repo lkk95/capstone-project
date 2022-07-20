@@ -8,13 +8,13 @@ const StyledTextInput = styled.fieldset`
 	textarea {
 		padding: 2em;
 		border: 0;
-		text-align: center;
+		border-radius: 0.4em;
+		font-family: 'Montserrat', sans-serif;
 	}
 	input[type='text'] {
 		padding: 1em;
 		border: 0;
 		border-radius: 0.4em;
-		text-align: center;
 	}
 	input[type='number'] {
 		width: 30%;
