@@ -1,6 +1,3 @@
-import {useEffect, useState} from 'react';
-
-import Button from '../Button/Button.js';
 import StyledButtons from '../EditForm/styledbuttons.js';
 
 import StyledImageUpload from './styledimageupload.js';
